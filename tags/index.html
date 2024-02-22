@@ -132,7 +132,7 @@
     
     
         <div class="trm-logo-text">
-            Raspberry&#39;s<span>Personal Blog</span>
+            Rasp<span>berry</span>
         </div>
     
 </a>
@@ -341,7 +341,16 @@
     
         <li>
             <div class="trm-label">
-                Age:
+                City:
+            </div>
+            <div class="trm-label trm-label-light">
+                Suzhou
+            </div>
+        </li>
+    
+        <li>
+            <div class="trm-label">
+                siderbar.age:
             </div>
             <div class="trm-label trm-label-light">
                 21
@@ -501,6 +510,22 @@
     <!-- 评论插件 -->
     
         
+
+        
+
+            
+<script src="https://npm.elemecdn.com/twikoo@1.6.7/dist/twikoo.all.min.js" data-swup-reload-script data-reset="true"></script>
+
+            <script data-swup-reload-script>
+                twikoo.init({
+                    ...{"enable":true,"envId":"https://rasp6erry-twikoo.hf.space","region":null,"option":null},
+                    el:'#tcomment'
+                }).then(function () {
+                    let container = document.querySelector('body>.tk-admin-container')
+                    if(container) container.remove()
+                    document.body.append(document.querySelector('.tk-admin-container'))
+                });;
+            </script>
 
         
     
