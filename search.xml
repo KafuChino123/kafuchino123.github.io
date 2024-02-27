@@ -61,9 +61,10 @@
       </tags>
   </entry>
   <entry>
-    <title>test</title>
-    <url>/2024/02/27/Test/</url>
-    <content><![CDATA[<p>1</p>
+    <title>CPT103-L1-Introduction</title>
+    <url>/2024/02/27/CPT103-week1/</url>
+    <content><![CDATA[<p>这是我自己编写的第一篇上传到这里的文章，算是我个人对这节课的学习内容的总结吧。</p>
+<p>这节是CPT103这个学期的第一节课，主要是对数据库整体的概念，应用和一些基本的术语(Terminologies)。问了一些ics的同学(他们上学期学这个)，这些基本的东西考试不考，但是后面会常用，而我看了一下好多感觉还不太好记，所以就在这里简单总结一下。</p>
 ]]></content>
       <categories>
         <category>XJTLU</category>
