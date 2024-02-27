@@ -68,7 +68,7 @@
 <h2 id="比较重要的"><a href="#比较重要的" class="headerlink" title="比较重要的"></a>比较重要的</h2><p><strong>relation(关系)</strong>: is a mathematical concept. The physical form of a relation is a table with columns and rows.<br>简单理解就是一个有行有列的表格，更准确地说是关系数据库(relational database)中的一系列元组(tuple)的集合。</p>
 <p><strong>attribute(特性)</strong>: is a named column of a relation.<br>一个纵列。许多非关系型数据库或多值数据库系统中，列对应于特性。</p>
 <p><strong>domain(域)</strong>: is the set of allowable values for attributes.<br>一组具有相同数据类型和约束的属性值的集合。</p>
-<p><img src="/%E5%85%B3%E7%B3%BB%E7%89%B9%E6%80%A7%E5%9F%9F.jpg" alt="关系特性域" title="关系特性域" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/attribute.jpg" alt="关系特性域" title="关系特性域" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 ]]></content>
       <categories>
         <category>XJTLU</category>
