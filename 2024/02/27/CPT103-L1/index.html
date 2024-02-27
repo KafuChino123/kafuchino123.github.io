@@ -7,18 +7,18 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="这是我自己写的第一篇上传到这里的文章，算是我个人对这节课的学习内容的总结吧😋 这节是CPT103这个学期的第一节课，主要是数据库整体的概念，应用和一些基本的术语(Terminologies)。我看了一下那些术语，好多感觉还不太好记，所以就在这里简单总结一下。*中文对应名词及相关解释参考了维基百科，以及Google Gemini给出的部分解答。 Basic Terminologiesrelatio">
+<meta name="description" content="这节是CPT103这个学期的第一节课，主要是数据库整体的概念，应用和一些基本的术语(Terminologies)。我看了一下那些术语，好多感觉还不太好记，所以就在这里简单总结一下。*中文对应名词及相关解释参考了维基百科，以及Google Gemini给出的部分解答。 Basic Terminologiesrelation(关系): 简单理解就是一个有行有列的表格，更准确地说是关系数据库(relat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CPT103-L1-Introduction">
 <meta property="og:url" content="https://kafuchino123.github.io/2024/02/27/CPT103-L1/index.html">
 <meta property="og:site_name" content="Raspberry.的个人博客">
-<meta property="og:description" content="这是我自己写的第一篇上传到这里的文章，算是我个人对这节课的学习内容的总结吧😋 这节是CPT103这个学期的第一节课，主要是数据库整体的概念，应用和一些基本的术语(Terminologies)。我看了一下那些术语，好多感觉还不太好记，所以就在这里简单总结一下。*中文对应名词及相关解释参考了维基百科，以及Google Gemini给出的部分解答。 Basic Terminologiesrelatio">
+<meta property="og:description" content="这节是CPT103这个学期的第一节课，主要是数据库整体的概念，应用和一些基本的术语(Terminologies)。我看了一下那些术语，好多感觉还不太好记，所以就在这里简单总结一下。*中文对应名词及相关解释参考了维基百科，以及Google Gemini给出的部分解答。 Basic Terminologiesrelation(关系): 简单理解就是一个有行有列的表格，更准确地说是关系数据库(relat">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://kafuchino123.github.io/img/404.jpg">
 <meta property="og:image" content="https://kafuchino123.github.io/img/404.jpg">
 <meta property="og:image" content="https://kafuchino123.github.io/img/404.jpg">
 <meta property="article:published_time" content="2024-02-27T03:41:00.000Z">
-<meta property="article:modified_time" content="2024-02-27T11:34:54.629Z">
+<meta property="article:modified_time" content="2024-02-27T11:37:49.495Z">
 <meta property="article:author" content="Raspberry">
 <meta property="article:tag" content="CPT103">
 <meta name="twitter:card" content="summary">
@@ -68,7 +68,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"kafuchino123.github.io","author":"Raspberry","root":"/","typed_text":["计算寄大学牲..."],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"log.svg","icon16":"log.svg","icon32":"log.svg","appleTouchIcon":"log.svg","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms","author":"Post author: ","copyright_link":"Post link: ","copyright_license_title":"Copyright Notice: ","copyright_license_content":"All articles in this blog are licensed under undefined unless otherwise stated.","copy_success":"Copied","copy_failure":"Copy failed","open_read_mode":"Enter reading mode","exit_read_mode":"Exit reading mode","notice_outdate_message":"It has been undefined days since the last update, the content of the article may be outdated.","sticky":"TOP","just":"Just","min":"minutes ago","hour":"hours ago","day":"days ago","month":"months ago"},"swup":false,"plugin":{"flickr_justified_gallery":"https://npm.elemecdn.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":false,"title":"default","height_limit":200},"toc":{"post_title":true},"live_time":{"start_time":"02/20/2024 15:00:00","prefix":"The blog has been lovely to run undefined day"},"covers":["/random1.jpg","/random2.jpg","/random3.jpg","/random4.jpg","/random5.jpg","/random6.jpg","/random7.jpg"],"search":{"enable":true,"type":"local","href":"https://www.google.com/search?q=site:","domain":null,"trigger":"auto","path":"search.xml"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-02-27 19:34:54"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-02-27 19:37:49"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -400,8 +400,7 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <p>这是我自己写的第一篇上传到这里的文章，算是我个人对这节课的学习内容的总结吧😋</p>
-<p>这节是CPT103这个学期的第一节课，主要是数据库整体的概念，应用和一些基本的术语(Terminologies)。我看了一下那些术语，好多感觉还不太好记，所以就在这里简单总结一下。<br>*中文对应名词及相关解释参考了维基百科，以及Google Gemini给出的部分解答。</p>
+    <p>这节是CPT103这个学期的第一节课，主要是数据库整体的概念，应用和一些基本的术语(Terminologies)。我看了一下那些术语，好多感觉还不太好记，所以就在这里简单总结一下。<br>*中文对应名词及相关解释参考了维基百科，以及Google Gemini给出的部分解答。</p>
 <h2 id="Basic-Terminologies"><a href="#Basic-Terminologies" class="headerlink" title="Basic Terminologies"></a>Basic Terminologies</h2><p><strong>relation(关系)</strong>: 简单理解就是一个有行有列的表格，更准确地说是关系数据库(relational database)中的一系列元组(tuple)的集合。</p>
 <p><strong>attribute(特性)</strong>: 一个纵列。许多非关系型数据库或多值数据库系统中，列对应于特性。</p>
 <p><strong>domain(域)</strong>: 一组具有相同数据类型和约束的属性值的集合。</p>
