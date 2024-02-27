@@ -63,8 +63,8 @@
   <entry>
     <title>CPT103-L1-Introduction</title>
     <url>/2024/02/27/CPT103-L1/</url>
-    <content><![CDATA[<p>这是我自己编写的第一篇上传到这里的文章，算是我个人对这节课的学习内容的总结吧😋</p>
-<p>这节是CPT103这个学期的第一节课，主要是对数据库整体的概念，应用和一些基本的术语(Terminologies)。我看了一下那些术语，好多感觉还不太好记，所以就在这里简单总结一下。<br>*中文对应名词及相关解释参考了维基百科，以及Google Gemini给出的部分解答。</p>
+    <content><![CDATA[<p>这是我自己写的第一篇上传到这里的文章，算是我个人对这节课的学习内容的总结吧😋</p>
+<p>这节是CPT103这个学期的第一节课，主要是数据库整体的概念，应用和一些基本的术语(Terminologies)。我看了一下那些术语，好多感觉还不太好记，所以就在这里简单总结一下。<br>*中文对应名词及相关解释参考了维基百科，以及Google Gemini给出的部分解答。</p>
 <h2 id="Basic-Terminologies"><a href="#Basic-Terminologies" class="headerlink" title="Basic Terminologies"></a>Basic Terminologies</h2><p><strong>relation(关系)</strong>: 简单理解就是一个有行有列的表格，更准确地说是关系数据库(relational database)中的一系列元组(tuple)的集合。</p>
 <p><strong>attribute(特性)</strong>: 一个纵列。许多非关系型数据库或多值数据库系统中，列对应于特性。</p>
 <p><strong>domain(域)</strong>: 一组具有相同数据类型和约束的属性值的集合。</p>
