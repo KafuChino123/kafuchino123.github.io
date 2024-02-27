@@ -64,11 +64,19 @@
     <title>CPT103-L1-Introduction</title>
     <url>/2024/02/27/CPT103-L1/</url>
     <content><![CDATA[<p>这是我自己编写的第一篇上传到这里的文章，算是我个人对这节课的学习内容的总结吧。</p>
-<p>这节是CPT103这个学期的第一节课，主要是对数据库整体的概念，应用和一些基本的术语(Terminologies)。问了一些ics的同学(他们上学期学这个)，这些基本的东西考试不考，但是后面会常用，而我看了一下好多感觉还不太好记，所以就在这里简单总结一下。<br>*中文对应名词及相关解释参考了维基百科。</p>
-<h2 id="比较重要的"><a href="#比较重要的" class="headerlink" title="比较重要的"></a>比较重要的</h2><p><strong>relation(关系)</strong>: is a mathematical concept. The physical form of a relation is a table with columns and rows.<br>简单理解就是一个有行有列的表格，更准确地说是关系数据库(relational database)中的一系列元组(tuple)的集合。</p>
-<p><strong>attribute(特性)</strong>: is a named column of a relation.<br>一个纵列。许多非关系型数据库或多值数据库系统中，列对应于特性。</p>
-<p><strong>domain(域)</strong>: is the set of allowable values for attributes.<br>一组具有相同数据类型和约束的属性值的集合。</p>
+<p>这节是CPT103这个学期的第一节课，主要是对数据库整体的概念，应用和一些基本的术语(Terminologies)。问了一些ics的同学(他们上学期学这个)，这些基本的东西考试不考，但是后面会常用，而我看了一下好多感觉还不太好记，所以就在这里简单总结一下。<br>*中文对应名词及相关解释参考了维基百科，以及Google Gemini给出的部分解答。</p>
+<h2 id="Basic-Terminologies"><a href="#Basic-Terminologies" class="headerlink" title="Basic Terminologies"></a>Basic Terminologies</h2><p><strong>relation(关系)</strong>: 简单理解就是一个有行有列的表格，更准确地说是关系数据库(relational database)中的一系列元组(tuple)的集合。</p>
+<p><strong>attribute(特性)</strong>: 一个纵列。许多非关系型数据库或多值数据库系统中，列对应于特性。</p>
+<p><strong>domain(域)</strong>: 一组具有相同数据类型和约束的属性值的集合。</p>
 <p><img src="/attribute.jpg" alt="关系特性域" title="关系特性域" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><strong>Tuple(元组)</strong>: 关系中的一行数据，也称为记录(record)。</p>
+<p><strong>The degree of a relation(关系的度)</strong>: 指关系中特性的个数。例如，一个关系包含姓名、年龄、性别三个特性，那么该关系的度为3。</p>
+<p><strong>Cardinality(基数)</strong>: 指数据库中某个表的某个列中不重复行的总个数。</p>
+<p>以下名词可以互相替换：<br><img src="/alternativeTerminologies.jpg" alt="alternativeTerminologies" title="alternativeTerminologies" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="Relation-Keys"><a href="#Relation-Keys" class="headerlink" title="Relation Keys"></a>Relation Keys</h2><p><strong>Superkey(超键)</strong>: 关系中能唯一标识元组的属性集合。换句话说，超键是能够确定关系中每个元组的唯一性的属性集合。</p>
+<p><strong>Candidate key(候选键)</strong>: 关系中能够唯一标识元组的属性集合，但是要满足两个条件：①能够唯一标识每个元组；②候选键中的属性(特性)不能有任何冗余</p>
+<p><strong>Primary key()</strong>:</p>
+<p><strong>composite key()</strong>:</p>
 ]]></content>
       <categories>
         <category>XJTLU</category>
