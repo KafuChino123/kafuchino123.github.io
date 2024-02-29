@@ -7,17 +7,17 @@
 <h2 id="Basic-Terminologies"><a href="#Basic-Terminologies" class="headerlink" title="Basic Terminologies"></a>Basic Terminologies</h2><p><strong>relation(关系)</strong>: 简单理解就是一个有行有列的表格，更准确地说是关系数据库(relational database)中的一系列元组(tuple)的集合。</p>
 <p><strong>attribute(特性)</strong>: 一个纵列。许多非关系型数据库或多值数据库系统中，列对应于特性。</p>
 <p><strong>domain(域)</strong>: 一组具有相同数据类型和约束的属性值的集合。</p>
-<p><img src="/attribute.jpg" alt="关系特性域" title="关系特性域" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/pictures/CPT103-L1/attribute.jpg" alt="关系特性域" title="关系特性域" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <p><strong>Tuple(元组)</strong>: 关系中的一行数据，也称为记录(record)。</p>
 <p><strong>The degree of a relation(关系的度)</strong>: 指关系中特性的个数。例如，一个关系包含姓名、年龄、性别三个特性，那么该关系的度为3。</p>
 <p><strong>Cardinality(基数)</strong>: 指数据库中某个表的某个列中不重复行的总个数。</p>
-<p>以下名词可以互相替换：<br><img src="/alternativeTerminologies.png" alt="alternativeTerminologies" title="alternativeTerminologies" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>以下名词可以互相替换：<br><img src="/pictures/CPT103-L1/alternativeTerminologies.png" alt="alternativeTerminologies" title="alternativeTerminologies" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <h2 id="Relation-Keys"><a href="#Relation-Keys" class="headerlink" title="Relation Keys"></a>Relation Keys</h2><p><strong>Superkey(超键)</strong>: 关系中能唯一标识元组的属性集合。换句话说，超键是能够确定关系中每个元组的唯一性的属性集合。</p>
 <p><strong>Candidate key(候选键)</strong>: 关系中能够唯一标识元组的属性集合，但是要满足：候选键中的属性(特性)不能有任何冗余。</p>
 <p><strong>Primary key(主键)</strong>: 关系中用于唯一标识每个元组的属性或属性组，但是有以下特点：①主键中的值必须唯一，不能重复；②主键不能包含空值；③主键的值不能被修改；④ 一个关系中只能有一个主键。</p>
 <p><strong>Alternate key(替代键)</strong>: 指除了主键之外的，能够唯一标识关系中每个元组的属性或属性组。同样要求：①替代键中值唯一；②不能包含空值。</p>
 <p><strong>composite key(复合键)</strong>: 由多个列（字段）组成的键。这些列结合在一起形成一个唯一的索引，用于唯一标识数据库中的每个记录。</p>
-<p>*这些键有包含关系，均属于超键，所以超键的特点其他键也都具有：<br><img src="/relationKeys.png" alt="relationKeys" title="relationKeys" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>*这些键有包含关系，均属于超键，所以超键的特点其他键也都具有：<br><img src="/pictures/CPT103-L1/relationKeys.png" alt="relationKeys" title="relationKeys" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <p><strong>foreign key(外键)</strong>: 引用另一个表中的主键（primary key）的列。外键用于建立表之间的关系，并确保数据的完整性和一致性。</p>
 <hr>
 <p>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
@@ -55,42 +55,6 @@
       </tags>
   </entry>
   <entry>
-    <title>The second post</title>
-    <url>/2024/02/21/the%20second%20post/</url>
-    <content><![CDATA[<p>tips：这个是用来测试文章是否可以成功上传到GitHub，内容与第一篇一致。<br>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<h2 id="Quick-Start-1"><a href="#Quick-Start-1" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post-1"><a href="#Create-a-new-post-1" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server-1"><a href="#Run-server-1" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files-1"><a href="#Generate-static-files-1" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites-1"><a href="#Deploy-to-remote-sites-1" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>Swift</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>INT104-T1-Python</title>
     <url>/2024/02/29/INT104-T1/</url>
     <content><![CDATA[<p>#INT104 #Python</p>
@@ -98,7 +62,7 @@
 <p>本篇文章总结了 tutorial 1 主要的语法知识点。（因为在这之前相信都有上学期的Java基础，所以以Python的语法特点为重点，对关键字的定义和用途不作过多解释。）</p>
 <h3 id="Variable-变量"><a href="#Variable-变量" class="headerlink" title="Variable (变量)"></a>Variable (变量)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="number">3</span></span><br><span class="line">y = <span class="number">4</span></span><br><span class="line">z = x * y</span><br><span class="line">answer = <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(answer)</span><br></pre></td></tr></table></figure>
 
-<h3 id="Types-类型"><a href="#Types-类型" class="headerlink" title="Types (类型)"></a>Types (类型)</h3><p><img src="/pictures/types.png" alt="types" title="types" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="Types-类型"><a href="#Types-类型" class="headerlink" title="Types (类型)"></a>Types (类型)</h3><p><img src="/pictures/INT104-T1/types.png" alt="types" title="types" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <h3 id="Casting-types-强制转换"><a href="#Casting-types-强制转换" class="headerlink" title="Casting types (强制转换)"></a>Casting types (强制转换)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="number">10</span>     <span class="comment"># This is an integer</span></span><br><span class="line">y = <span class="string">&quot;20&quot;</span>   <span class="comment"># This is a string</span></span><br><span class="line">z= x + <span class="built_in">int</span>(y)</span><br></pre></td></tr></table></figure>
 
 <h3 id="Strings-字符串"><a href="#Strings-字符串" class="headerlink" title="Strings (字符串)"></a>Strings (字符串)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="string">&quot;This can be&quot;</span></span><br><span class="line">y = <span class="string">&quot;repeated &quot;</span></span><br><span class="line">z = x + <span class="string">&quot; &quot;</span> + y * <span class="number">3</span></span><br><span class="line">x = x.upper() <span class="comment">#字符串内容大写</span></span><br><span class="line">x = x.lower() <span class="comment">#字符串内容小写</span></span><br></pre></td></tr></table></figure>
@@ -108,7 +72,7 @@
 <h3 id="Lists-列表"><a href="#Lists-列表" class="headerlink" title="Lists (列表)"></a>Lists (列表)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># a list of strings</span></span><br><span class="line">fruits = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;orange&quot;</span>, <span class="string">&quot;tomato&quot;</span>, <span class="string">&quot;banana&quot;</span>] </span><br><span class="line">fruits[<span class="number">2</span>]    <span class="comment"># indexing a list</span></span><br><span class="line"><span class="built_in">len</span>(fruits)  <span class="comment"># the length of a list</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># a list with integers</span></span><br><span class="line"><span class="comment"># Syntax : range(start point, end point, step size)</span></span><br><span class="line">nums = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">0</span>, <span class="number">30</span>, <span class="number">5</span>))</span><br><span class="line"><span class="built_in">print</span>(nums) <span class="comment"># -&gt; [0, 5, 10, 15, 20, 25] The end point is not included</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Slicing lists</span></span><br><span class="line"><span class="comment"># Syntax: List[start point : end point : step size ]</span></span><br><span class="line">nums2 = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">0</span>, <span class="number">100</span>, <span class="number">5</span>))</span><br><span class="line"><span class="built_in">print</span>(nums)</span><br><span class="line"><span class="built_in">print</span>(nums2[<span class="number">1</span>:<span class="number">5</span>:<span class="number">2</span>]) <span class="comment"># get from item 1(starting point) through item 5(end point, not included) with step size 2</span></span><br><span class="line"><span class="built_in">print</span>(nums2[<span class="number">0</span>:<span class="number">3</span>])    <span class="comment"># get items 0 through 3</span></span><br><span class="line"><span class="built_in">print</span>(nums2[<span class="number">4</span>:])     <span class="comment"># get items 4 onwards</span></span><br><span class="line"><span class="built_in">print</span>(nums2[-<span class="number">1</span>])     <span class="comment"># get the last item</span></span><br><span class="line"><span class="built_in">print</span>(nums2[::-<span class="number">1</span>])   <span class="comment"># get the whole list backwards</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># helpful functions</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(nums))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">max</span>(nums))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">min</span>(nums))</span><br><span class="line"></span><br><span class="line"><span class="comment"># lists can be of different types</span></span><br><span class="line">mixed = [<span class="number">3</span>, <span class="string">&quot;Two&quot;</span>, <span class="literal">True</span>, <span class="literal">None</span>]</span><br></pre></td></tr></table></figure>
 
 <h3 id="Tuples"><a href="#Tuples" class="headerlink" title="Tuples()"></a>Tuples()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">fruits = (<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;orange&quot;</span>, <span class="string">&quot;tomato&quot;</span>, <span class="string">&quot;banana&quot;</span>)</span><br></pre></td></tr></table></figure>
-<p>那么问题来了，tuples和lists的区别是什么？<br>这里有一些解答：<br><img src="/pictures/tuplesvslists.png" alt="tuplesvslists" title="tuplesvslists" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>那么问题来了，tuples和lists的区别是什么？<br>这里有一些解答：<br><img src="/pictures/INT104-T1/tuplesvslists.png" alt="tuplesvslists" title="tuplesvslists" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <h3 id="Sets"><a href="#Sets" class="headerlink" title="Sets ()"></a>Sets ()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = &#123;<span class="number">3</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;       <span class="comment"># a set created directly</span></span><br><span class="line">y = <span class="built_in">set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">3</span>])  <span class="comment"># a set created from a list</span></span><br><span class="line">x == y                 <span class="comment"># True, x and y are the same object</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="Dictionaries"><a href="#Dictionaries" class="headerlink" title="Dictionaries ()"></a>Dictionaries ()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Syntax: name = &#123;key: value&#125;</span></span><br><span class="line">days = &#123;<span class="string">&quot;Monday&quot;</span>: <span class="string">&quot;1&quot;</span>,</span><br><span class="line">       <span class="string">&quot;Tuesday&quot;</span>: <span class="string">&quot;2&quot;</span>&#125;</span><br><span class="line">days[<span class="string">&quot;Monday&quot;</span>]  <span class="comment"># 1</span></span><br><span class="line"></span><br><span class="line">days.update(&#123;<span class="string">&quot;Saturday&quot;</span>: <span class="string">&quot;6&quot;</span>&#125;)</span><br><span class="line"></span><br><span class="line">days.pop(<span class="string">&quot;Monday&quot;</span>) <span class="comment"># remove a day</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(days.keys())    <span class="comment"># dict_keys([&#x27;Tuesday&#x27;, &#x27;Saturday&#x27;])</span></span><br><span class="line"><span class="built_in">print</span>(days.values())  <span class="comment"># dict_values([&#x27;2&#x27;, &#x27;6&#x27;])</span></span><br></pre></td></tr></table></figure>
