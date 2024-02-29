@@ -98,7 +98,12 @@
 <h3 id="Variable"><a href="#Variable" class="headerlink" title="Variable ()"></a>Variable ()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="number">3</span></span><br><span class="line">y = <span class="number">4</span></span><br><span class="line">z = x * y</span><br><span class="line">answer = <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(answer)</span><br></pre></td></tr></table></figure>
 
 <h3 id="Types"><a href="#Types" class="headerlink" title="Types ()"></a>Types ()</h3><p><img src="/pictures/types.png" alt="types" title="types" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h3 id="Casting-types"><a href="#Casting-types" class="headerlink" title="Casting types ()"></a>Casting types ()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="number">10</span>     \<span class="comment"># This is an integer</span></span><br><span class="line">y = <span class="string">&quot;20&quot;</span>   \<span class="comment"># This is a string</span></span><br><span class="line">z= x + <span class="built_in">int</span>(y)</span><br></pre></td></tr></table></figure>]]></content>
+<h3 id="Casting-types"><a href="#Casting-types" class="headerlink" title="Casting types ()"></a>Casting types ()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="number">10</span>     <span class="comment"># This is an integer</span></span><br><span class="line">y = <span class="string">&quot;20&quot;</span>   <span class="comment"># This is a string</span></span><br><span class="line">z= x + <span class="built_in">int</span>(y)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings ()"></a>Strings ()</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="string">&quot;This can be&quot;</span></span><br><span class="line">y = <span class="string">&quot;repeated &quot;</span></span><br><span class="line">z = x + <span class="string">&quot; &quot;</span> + y * <span class="number">3</span></span><br><span class="line">x = x.upper() <span class="comment">#字符串内容大写</span></span><br><span class="line">x = x.lower() <span class="comment">#字符串内容小写</span></span><br><span class="line"></span><br><span class="line">multipleString = </span><br></pre></td></tr></table></figure>
+
+
+]]></content>
       <categories>
         <category>XJTLU</category>
       </categories>
