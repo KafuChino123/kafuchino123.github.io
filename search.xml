@@ -88,4 +88,25 @@
         <tag>Python</tag>
       </tags>
   </entry>
+  <entry>
+    <title>计算机网络自学笔记-第一章</title>
+    <url>/2024/03/02/ComNet-C1/</url>
+    <content><![CDATA[<p>#计算机网络</p>
+<p>计算机网络系列笔记根据B站课程 <a href="https://space.bilibili.com/360996402">@湖科大教书匠</a> 的课程总结而来，供自学以及分享使用。<br><a href="https://www.bilibili.com/video/BV1NT411g7n6?p=3&vd_source=bda40cfe75d1533c45205d7bec39503b">&lt;课程链接&gt;</a></p>
+<h2 id="1-2-因特网概述"><a href="#1-2-因特网概述" class="headerlink" title="1.2 因特网概述"></a>1.2 因特网概述</h2><h3 id="1-2-1-网络、互联网和因特网"><a href="#1-2-1-网络、互联网和因特网" class="headerlink" title="1.2.1 网络、互联网和因特网"></a>1.2.1 网络、互联网和因特网</h3><p>• 网络（Network）由若干结点（Node）和连接这些结点的链路（Link）组成。<br>• 多个网络还可以通过路由器互连起来，这样就构成了一个覆盖范围更大的网络，即互联网。<br>————因此，互联网也称为“网络的网络(Network of Networks)”。<br>• 因特网（Internet）是世界上最大的互连网络（用户数以亿计，互连的网络数以百万计）。<br>————连接在因特网上的计算机称为主机（host）<br><img src="/pictures/ComNet-C1/%E7%BD%91%E7%BB%9C.png" alt="网络" title="网络" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br><img src="/pictures/ComNet-C1/ivsI.png" alt="ivsI" title="ivsI" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="1-2-2-因特网简介"><a href="#1-2-2-因特网简介" class="headerlink" title="1.2.2 因特网简介"></a>1.2.2 因特网简介</h3><p>• 因特网发展的三个阶段：<br><img src="/pictures/ComNet-C1/%E4%B8%89%E4%B8%AA%E9%98%B6%E6%AE%B5.png" alt="三个阶段" title="三个阶段" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>• 因特网服务提供者：ISP（Internet Service Provider）<br>————我国的ISP就是三大运营商：移动联通电信（广电：？<br>————给他们缴纳一定费用，他们给主机一个IP地址，从而让主机能够在因特网中通信</p>
+<p>• ISP的三层结构：<br><img src="/pictures/ComNet-C1/ISP%E4%B8%89%E5%B1%82%E7%BB%93%E6%9E%84.png" alt="ISP三层结构" title="ISP三层结构" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>————顺带一提，一旦某个用户能够接入到因特网，那么他也可以成为一个ISP。（购买调制解调器或路由器等设备，让其他用户和他相连。）</p>
+<p>• 因特网的标准化工作：<br><img src="/pictures/ComNet-C1/%E6%A0%87%E5%87%86%E5%8C%96.png" alt="标准化" title="标准化" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>• 因特网的管理机构：<br><img src="/pictures/ComNet-C1/%E7%AE%A1%E7%90%86.png" alt="管理" title="管理" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>• 因特网的组成：<br><img src="/pictures/ComNet-C1/%E7%BB%84%E6%88%90.png" alt="组成" title="组成" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
 </search>
