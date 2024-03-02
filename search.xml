@@ -115,7 +115,7 @@
     <title>Swift 中 struct 和 class 的区别</title>
     <url>/2024/03/02/diffBetweenSC/</url>
     <content><![CDATA[<p>#Swift</p>
-<p>Swift，作为一个面向对象语言，也是有 class 关键字的。<br>但是不同于Java，C# 等语言，它的 <code>class</code> 似乎并不是很常用（？<br>而在SwiftUI中，<code>class</code>的功能似乎被 <code>struct</code> 取代——行使和 <code>class</code> 相似的功能，但是我还是时常不清楚二者的区别。所以在此总结一下😋。<br>——部分解答参考了Google Gemini给出的回答，如有错误，请务必及时指出！欧内盖！</p>
+<p>Swift，作为一个面向对象语言，也是有 <code>class</code> 关键字的。<br>但是不同于Java，C# 等语言，它的 <code>class</code> 似乎并不是很常用（？<br>而在SwiftUI中，<code>class</code>的功能似乎被 <code>struct</code> 取代——行使和 <code>class</code> 相似的功能，但是我还是时常不清楚二者的区别。所以在此总结一下😋。<br>——部分解答参考了Google Gemini给出的回答，如有错误，请务必及时指出！欧内盖！</p>
 <p>Swift 中的 <code>struct</code> 和 <code>class</code> 都是用来定义自定义数据类型的，它们之间有许多相似之处，但也有一些关键的区别。</p>
 <p><strong>值类型与引用类型</strong></p>
 <p>最大的区别在于 struct 是值类型，而 class 是引用类型。这意味着：</p>
