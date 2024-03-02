@@ -115,6 +115,37 @@
     <title>Swift 中 struct 和 class 的区别</title>
     <url>/2024/03/02/diffBetweenSC/</url>
     <content><![CDATA[<p>#Swift</p>
+<p>Swift，作为一个面向对象语言，也是有 class 关键字的。<br>但是不同于Java，C# 等语言，它的 <code>class</code> 似乎并不是很常用（？<br>而在SwiftUI中，<code>class</code>的功能似乎被 <code>struct</code> 取代——行使和 <code>class</code> 相似的功能，但是我还是时常不清楚二者的区别。所以在此总结一下😋。<br>——部分解答参考了Google Gemini给出的回答，如有错误，请务必及时指出！欧内盖！</p>
+<p>Swift 中的 <code>struct</code> 和 <code>class</code> 都是用来定义自定义数据类型的，它们之间有许多相似之处，但也有一些关键的区别。</p>
+<p><strong>值类型与引用类型</strong></p>
+<p>最大的区别在于 struct 是值类型，而 class 是引用类型。这意味着：</p>
+<ul>
+<li><strong>值类型</strong>：将一个值类型变量赋值给另一个变量时，会将该值的副本赋值给另一个变量。因此，对其中一个变量的更改不会影响另一个变量。</li>
+<li><strong>引用类型</strong>：将一个引用类型变量赋值给另一个变量时，只会将该变量对对象的引用赋值给另一个变量。因此，对其中一个变量的更改会影响另一个变量。</li>
+</ul>
+<p><strong>示例</strong></p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Point</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> x: <span class="type">Int</span></span><br><span class="line">  <span class="keyword">var</span> y: <span class="type">Int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a <span class="operator">=</span> <span class="type">Point</span>(x: <span class="number">1</span>, y: <span class="number">2</span>)</span><br><span class="line"><span class="keyword">var</span> b <span class="operator">=</span> a</span><br><span class="line"></span><br><span class="line">b.x <span class="operator">=</span> <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(a.x) <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">print</span>(b.x) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>Point</code> 就是一个值类型。因此，将 <code>a</code> 赋值给 <code>b</code> 时，会将 <code>a</code> 的值复制给 <code>b</code>。在这之后，如果对 <code>b.x</code> 做更改， <code>a.x</code> 的值不会受到影响。</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> name: <span class="type">String</span></span><br><span class="line">  <span class="keyword">var</span> age: <span class="type">Int</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">init</span>(<span class="params">name</span>: <span class="type">String</span>, <span class="params">age</span>: <span class="type">Int</span>) &#123;</span><br><span class="line">    <span class="keyword">self</span>.name <span class="operator">=</span> name</span><br><span class="line">    <span class="keyword">self</span>.age <span class="operator">=</span> age</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c <span class="operator">=</span> <span class="type">Person</span>(name: <span class="string">&quot;John&quot;</span>, age: <span class="number">30</span>)</span><br><span class="line"><span class="keyword">var</span> d <span class="operator">=</span> c</span><br><span class="line"></span><br><span class="line">d.age <span class="operator">=</span> <span class="number">31</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(c.age) <span class="comment">// 31</span></span><br><span class="line"><span class="built_in">print</span>(d.age) <span class="comment">// 31</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>Person</code> 是一个引用类型。因此，将 <code>c</code> 赋值给 <code>d</code> 时，只会将 <code>c</code> 对对象的引用赋值给 <code>d</code>。在这之后，如果对 <code>d.age</code> 的值做出更改，<code>c.age</code> 的值也会受到影响。</p>
+<p><strong>其他区别</strong></p>
+<ul>
+<li><strong>继承</strong>：class 可以继承自另一个 class，而 struct 不能。</li>
+<li><strong>初始化</strong>：struct 有默认的成员初始化器，而 class 没有。</li>
+<li><strong>可变性</strong>：struct 实例默认是不可变的，而 class 实例是可变的。</li>
+<li><strong>类型转换</strong>：class 实例可以进行类型转换，而 struct 实例不能。</li>
+</ul>
+<p><strong>选择使用 struct 还是 class</strong></p>
+<p>一般来说，如果不需要继承或类型转换，并且希望使用值语义，则应使用 struct。如果需要继承或类型转换，或者需要可变实例，则应使用 class。</p>
+<p>以下是一些使用 struct 和 class 的示例：</p>
+<ul>
+<li><strong>使用 struct 表示简单的数据值</strong>，例如点、大小或颜色。</li>
+<li><strong>使用 struct 表示不可变的数据</strong>，例如日期或时间。</li>
+<li><strong>使用 class 表示复杂的数据结构</strong>，例如用户或文档。</li>
+<li><strong>使用 class 表示需要继承的数据结构</strong>，例如视图控制器或网络请求。</li>
+</ul>
 ]]></content>
       <categories>
         <category>Swift</category>
