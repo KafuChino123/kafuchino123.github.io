@@ -179,7 +179,7 @@
   <entry>
     <title>Hello World - The first post!</title>
     <url>/2024/02/20/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+    <content><![CDATA[<p>#Hexo<br>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -198,6 +198,51 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CPT103-L2-SQL</title>
+    <url>/2024/03/05/CPT103-L2/</url>
+    <content><![CDATA[<p>#CPT103 #Database</p>
+<p>CPT103 Lecture的第二节课，主要讲了<strong>SQL(Structured Query Language)<strong>、</strong>一些基本的创建表格的语法</strong>和<strong>一些元组(Tuple)的操作</strong>。</p>
+<h2 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h2><p>SQL(Structured Query Language, 结构化查询语言)，是一种特定目的编程语言，用于管理关系数据库管理系统(RDBMS)，或在关系流数据管理系统(RDSMS)中进行流处理。</p>
+<p><strong>SQL有三个重要的部分</strong>：</p>
+<ul>
+<li>数据定义语言(Data Definition Language, DDL):<br>用于定义和管理数据库对象，包括数据库、表、索引、视图、存储过程、触发器等。DDL语句用于定义和修改数据库对象的结构，不会直接对数据库中的数据进行操作。<br>DDL语句常用的关键字包括：</li>
+</ul>
+<p><strong>CREATE</strong>：用于创建数据库对象，例如表、索引、视图等。<br><strong>ALTER</strong>：用于修改数据库对象的结构，例如添加或删除列、修改列的数据类型等。<br><strong>DROP</strong>：用于删除数据库对象。</p>
+<ul>
+<li>数据操纵语言(Data Manipulation Language, DML):<br>是SQL语言的一个子集，用于对数据库中的数据进行操作，包括插入、更新、删除和检索数据。DML语句用于对数据库中的数据进行增删改查，不会直接对数据库对象的结构进行操作。<br>DML语句常用的关键字包括：</li>
+</ul>
+<p><strong>INSERT</strong>：用于插入一条或多条数据到数据库中。<br><strong>UPDATE</strong>：用于更新数据库中的数据。<br><strong>DELETE</strong>：用于删除数据库中的数据。<br><strong>SELECT</strong>：用于从数据库中检索数据。</p>
+<ul>
+<li>数据控制语言(Data Control Language, DCL):<br>是 SQL 语言的一个子集，用于控制数据库用户对数据库对象的访问权限。DCL 语句不会直接对数据库中的数据或结构进行操作，而是用于授予或收回用户对数据库对象的权限。<br>DCL 语句常用的关键字包括：</li>
+</ul>
+<p><strong>GRANT</strong>：用于授予用户对数据库对象的权限。<br><strong>REVOKE</strong>：用于收回用户对数据库对象的权限。</p>
+<h2 id="SQL的格式"><a href="#SQL的格式" class="headerlink" title="SQL的格式"></a>SQL的格式</h2><ul>
+<li>需要注意的是，SQL语言对关键字的大小写并不敏感，原则上大写小写都没问题，但一般为了更好的可读性和代码的整洁规范，我们选择<strong>关键字全部大写</strong>；</li>
+<li>而表格的名字、列的名字往往是大小写敏感的，所以我们选择这么写：</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> (sName) <span class="keyword">FROM</span> Student;</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建一个逻辑结构-Schema"><a href="#创建一个逻辑结构-Schema" class="headerlink" title="创建一个逻辑结构(Schema)"></a>创建一个逻辑结构(Schema)</h2><p>可以：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> SCHEMA name;</span><br></pre></td></tr></table></figure>
+<p>或者：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE name;</span><br></pre></td></tr></table></figure>
+
+<p>Schema 指的是数据库对象的逻辑结构，包括表、视图、索引、存储过程、触发器等。它定义了数据库中数据的组织方式，以及数据库对象之间的关系。</p>
+<h2 id="创建我们的第一个表格"><a href="#创建我们的第一个表格" class="headerlink" title="创建我们的第一个表格"></a>创建我们的第一个表格</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> my_table ( </span><br><span class="line">    column1 <span class="type">int</span>, </span><br><span class="line">    column2 <span class="type">varchar</span>(<span class="number">40</span>) </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>正在更新中……我先开摆了。(@_@)</p>
+<hr>
+<p>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
+]]></content>
+      <categories>
+        <category>XJTLU</category>
+      </categories>
+      <tags>
+        <tag>CPT103</tag>
+        <tag>Database</tag>
       </tags>
   </entry>
 </search>
