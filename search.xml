@@ -210,15 +210,15 @@
 <ul>
 <li>数据定义语言(Data Definition Language, DDL):<br>用于定义和管理数据库对象，包括数据库、表、索引、视图、存储过程、触发器等。DDL语句用于定义和修改数据库对象的结构，不会直接对数据库中的数据进行操作。<br>DDL语句常用的关键字包括：</li>
 </ul>
-<p><strong>CREATE</strong>：用于创建数据库对象，例如表、索引、视图等。<br><strong>ALTER</strong>：用于修改数据库对象的结构，例如添加或删除列、修改列的数据类型等。<br><strong>DROP</strong>：用于删除数据库对象。</p>
+<p><code>CREATE</code>：用于创建数据库对象，例如表、索引、视图等。<br><code>ALTER</code>：用于修改数据库对象的结构，例如添加或删除列、修改列的数据类型等。<br><code>DROP</code>：用于删除数据库对象。</p>
 <ul>
 <li>数据操纵语言(Data Manipulation Language, DML):<br>是SQL语言的一个子集，用于对数据库中的数据进行操作，包括插入、更新、删除和检索数据。DML语句用于对数据库中的数据进行增删改查，不会直接对数据库对象的结构进行操作。<br>DML语句常用的关键字包括：</li>
 </ul>
-<p><strong>INSERT</strong>：用于插入一条或多条数据到数据库中。<br><strong>UPDATE</strong>：用于更新数据库中的数据。<br><strong>DELETE</strong>：用于删除数据库中的数据。<br><strong>SELECT</strong>：用于从数据库中检索数据。</p>
+<p><code>INSERT</code>：用于插入一条或多条数据到数据库中。<br><code>UPDATE</code>：用于更新数据库中的数据。<br><code>DELETE</code>：用于删除数据库中的数据。<br><code>SELECT</code>：用于从数据库中检索数据。</p>
 <ul>
 <li>数据控制语言(Data Control Language, DCL):<br>是 SQL 语言的一个子集，用于控制数据库用户对数据库对象的访问权限。DCL 语句不会直接对数据库中的数据或结构进行操作，而是用于授予或收回用户对数据库对象的权限。<br>DCL 语句常用的关键字包括：</li>
 </ul>
-<p><strong>GRANT</strong>：用于授予用户对数据库对象的权限。<br><strong>REVOKE</strong>：用于收回用户对数据库对象的权限。</p>
+<p><code>GRANT</code>：用于授予用户对数据库对象的权限。<br><code>REVOKE</code>：用于收回用户对数据库对象的权限。</p>
 <h2 id="SQL的格式"><a href="#SQL的格式" class="headerlink" title="SQL的格式"></a>SQL的格式</h2><ul>
 <li>需要注意的是，SQL语言对关键字的大小写并不敏感，原则上大写小写都没问题，但一般为了更好的可读性和代码的整洁规范，我们选择<strong>关键字全部大写</strong>；</li>
 <li>而表格的名字、列的名字往往是大小写敏感的，所以我们选择这么写：</li>
@@ -233,7 +233,94 @@
 <p>Schema 指的是数据库对象的逻辑结构，包括表、视图、索引、存储过程、触发器等。它定义了数据库中数据的组织方式，以及数据库对象之间的关系。</p>
 <h2 id="创建我们的第一个表格"><a href="#创建我们的第一个表格" class="headerlink" title="创建我们的第一个表格"></a>创建我们的第一个表格</h2><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> my_table ( </span><br><span class="line">    column1 <span class="type">int</span>, </span><br><span class="line">    column2 <span class="type">varchar</span>(<span class="number">40</span>) </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
-<p>正在更新中……我先开摆了。(@_@)</p>
+<h2 id="SQL语法"><a href="#SQL语法" class="headerlink" title="SQL语法"></a>SQL语法</h2><h3 id="‘USE’关键字"><a href="#‘USE’关键字" class="headerlink" title="‘USE’关键字:"></a>‘USE’关键字:</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">USE schema_name;</span><br></pre></td></tr></table></figure>
+<p>USE关键字用于选择要使用的数据库，通常在连接到数据库服务器后立即使用，以便后续的查询和操作都针对该数据库进行。如果不使用USE关键字，则默认情况下使用当前连接的数据库。</p>
+<h3 id="Inserting-Values-插入值"><a href="#Inserting-Values-插入值" class="headerlink" title="Inserting Values(插入值):"></a>Inserting Values(插入值):</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> my_table <span class="keyword">VALUES</span>  (<span class="number">1</span>, <span class="string">&#x27;ABC&#x27;</span>), (<span class="number">2</span>, <span class="string">&#x27;DEF&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>INSERT关键字用于向表中插入新记录。它是一种非常常用的SQL语句，可以用于将数据导入数据库中。<br>tips: <code>(1, &#39;ABC&#39;)</code>, <code>(2, &#39;DEF&#39;)</code>就是该table的两个元组(Tuple)。</p>
+<p>此外，还可以使用**反引号(&#96;)**，这样表格或列名字命名时如果有空格，就不需要使用’_’，直接空格即可：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> `my <span class="keyword">table</span>` (</span><br><span class="line">    `<span class="keyword">column</span> A` <span class="type">INT</span>,</span><br><span class="line">    `<span class="keyword">column</span> B` <span class="type">VARCHAR</span>(<span class="number">11</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>但是非常不建议这么做！正常我们就用上面的普通的命名方式<code>my_table</code>就好。</p>
+<h2 id="Numercial-Data-Types-数字的数据类型"><a href="#Numercial-Data-Types-数字的数据类型" class="headerlink" title="Numercial Data Types(数字的数据类型)"></a>Numercial Data Types(数字的数据类型)</h2><h3 id="Integers-整数"><a href="#Integers-整数" class="headerlink" title="Integers(整数)"></a>Integers(整数)</h3><ul>
+<li><p>example: <code>INT</code> or <code>INT(5)</code><br> - 括号内表示 integer 的总位数。</p>
+</li>
+<li><p>SMALLINT<br> - 占用：2字节(byte)<br> - 范围：-32,768 到 32,767，是左闭右开区间，即包括-32,768但不包括32,767。</p>
+</li>
+<li><p>INT or INTEGER<br> - 占用：4字节<br> - 范围：-2,147,483,648 到 2,147,483,647（无符号：0 到 4,294,967,295，也是左闭右开区间。<br> - 是最经典和常用的选择。（废话</p>
+</li>
+<li><p>BIGINT<br> - 占用：8字节<br> - 范围：-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807</p>
+</li>
+</ul>
+<h3 id="Fixed-Point-定点数"><a href="#Fixed-Point-定点数" class="headerlink" title="Fixed Point(定点数)"></a>Fixed Point(定点数)</h3><p>这是个全新的东西，细细说一下这个定点数是什么：</p>
+<ul>
+<li><p>example: <code>DECIMAL[(M[, D])]</code> or <code>NUMERIC[(M[, D])]</code><br>(tips: 中括号[]之间的是optional的，可有可无)<br>M -&gt; 总位数，D -&gt; 小数点后的位数<br>example：<code>price DECIMAL(10,2)</code></p>
+</li>
+<li><p>定点数是什么？<br> - <strong>定点数（Fixed-point number）</strong>是一种表示实数的格式，其特点是小数点的位置是固定的。</p>
+</li>
+<li><p>相比于浮点数，定点数的优点：<br> - 精度更高：浮点数的精度会受到指数的影响，而定点数的精度是固定的。<br> - 速度更快：定点数的运算速度比浮点数更快，因为不需要进行指数运算。<br> - 存储空间更小：定点数占用更少的存储空间，因为不需要存储指数。</p>
+</li>
+<li><p>定点数的缺点：<br> - 表示范围有限：定点数的表示范围由小数点的位置决定，无法表示超出范围的数字。<br> - 不适用于科学计算：定点数不适用于需要很高精度的科学计算。</p>
+</li>
+<li><p>定点数的表示方法：<br> - 定点数通常使用二进制表示，小数点的位置由整数部分和小数部分的位数决定。例如，一个8位定点数，其中4位整数部分，4位小数部分，可以表示的范围为-2^4到2^4-2^(-4)，精度为1&#x2F;2^(-4)。</p>
+</li>
+<li><p>常见的应用场景：<br> - 金融计算：定点数用于计算利率、汇率等金融数据。<br> - 嵌入式系统：定点数用于控制电机、温度等设备。<br> - 数字信号处理：定点数用于滤波、傅里叶变换等信号处理操作。</p>
+</li>
+</ul>
+<h3 id="Float-浮点数"><a href="#Float-浮点数" class="headerlink" title="Float(浮点数)"></a>Float(浮点数)</h3><ul>
+<li>example: <code>FLOAT</code> or <code>FLOAT(5)</code> or <code>FLOAT(3, 2)</code><br> - 括号内如果只有一个参数，则表示总位数；<br> - 如果有两个参数，则第一个表示总位数，第二个表示小数点后的位数。</li>
+</ul>
+<h3 id="String-Types-字符串类型"><a href="#String-Types-字符串类型" class="headerlink" title="String Types(字符串类型)"></a>String Types(字符串类型)</h3><ul>
+<li><code>CHAR[(M)]</code> or <code>VARCHAR(M)</code><br>M -&gt; 总位数<br>(tips: 中括号[]之间的是optional的，可有可无)</li>
+</ul>
+<p>二者之间的区别：<br> - <strong>存储方式</strong>:<br><strong>CHAR：</strong>固定长度，以空格填充不足部分。例如，CHAR(10)类型的列，如果存储的字符串长度不足10，则会用空格补足到10个字符。<br><strong>VARCHAR：</strong>可变长度，只存储字符串实际占用的空间。例如，VARCHAR(10)类型的列，如果存储的字符串长度为5，则只占用5个字节的存储空间。</p>
+<p> - <strong>性能</strong>:<br><strong>CHAR：</strong>查询效率较高，因为长度固定，可以直接进行比较。<br><strong>VARCHAR：</strong>查询效率略低，因为需要先获取字符串的实际长度，然后进行比较。</p>
+<p> - <strong>使用场景</strong>:<br><strong>CHAR：</strong>适用于存储长度固定且需要精确比较的字符串，例如身份证号码、密码等。<br><strong>VARCHAR：</strong>适用于存储长度可变且不需要精确比较的字符串，例如姓名、地址等。</p>
+<h3 id="String-Values-字符串值"><a href="#String-Values-字符串值" class="headerlink" title="String Values(字符串值)"></a>String Values(字符串值)</h3><ul>
+<li>SQL中，字符串值使用单引号：<code>&#39;I AM A STRING&#39;</code><br>(tips: 用双引号其实也可以，这方面也不严格)</li>
+<li>在字符串内部使用单引号时，前面加上反斜杠：<code>&#39;I\&#39;M A STRING&#39;</code><br>或使用双引号：<code>&#39;I&quot;M A STRING&#39;</code></li>
+</ul>
+<h3 id="Date-and-Time-日期与时间"><a href="#Date-and-Time-日期与时间" class="headerlink" title="Date and Time(日期与时间)"></a>Date and Time(日期与时间)</h3><ul>
+<li><p><code>DATE</code>:<br> - 支持的范围：’1000-01-01’ to ‘9999-12-31’.<br> - MySQL展示日期的格式：’YYYY-MM-DD’.</p>
+</li>
+<li><p><code>DATETIME[(fsp)]</code><br> - 支持的范围：’1000-01-01 00:00:00.000000’ to ‘9999-12-31 23:59:59.999999’.<br> - MySQL展示日期的格式：’YYYY-MM-DD hh:mm:ss[.fraction]’.</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> `staff` ( </span><br><span class="line">    `name` <span class="type">VARCHAR</span>(<span class="number">60</span>), </span><br><span class="line">    `id_card` <span class="type">CHAR</span>(<span class="number">6</span>), </span><br><span class="line">    `recruit_date` <span class="type">DATE</span>, </span><br><span class="line">    `last_login` DATETIME </span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>TIMESTAMP</code><br> - 和DATETIME相似，但是保存UTC时间。</li>
+</ul>
+<h3 id="NULL-and-Special-Values-特殊值"><a href="#NULL-and-Special-Values-特殊值" class="headerlink" title="NULL and Special Values(特殊值)"></a>NULL and Special Values(特殊值)</h3><ul>
+<li><p>NULL：<br><code>NULL</code>表示未知或缺失，它不是0、””或任何其他值。NULL可以出现在任何数据类型中，包括数字、字符串、日期等。<br> - 常用于：数据尚未收集；数据无法获得；数据被删除。</p>
+</li>
+<li><p>Special Values：<br>指具有特殊含义的值。<br>example：<br><code>NaN</code>: 表示非数字<br><code>Infinity</code>: 表示正无穷<br><code>-Infinity</code>: 表示负无穷</p>
+</li>
+</ul>
+<p> - 常用于：表示数据溢出或数据无效等情况。</p>
+<h3 id="Column-Options-列选项"><a href="#Column-Options-列选项" class="headerlink" title="Column Options(列选项)"></a>Column Options(列选项)</h3><p><code>col-name datatype [col-options]</code></p>
+<ul>
+<li><code>NOT NULL</code>: 这个列的值不能为NULL；</li>
+<li><code>UNIQUE</code>: 每个值都必须独一无二，不能重复；</li>
+<li><code>DEFAULT value</code>: 默认值。（在MS access中不工作）</li>
+<li><code>AUTO_INCREMENT</code>: 自动生成唯一数字，通常用于主键——每次向表中插入新记录时，MySQL会自动将AUTO_INCREMENT设置的列的值加1；也可以指定自增起始值，默认值为1。</li>
+</ul>
+<p>example:</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Persons ( </span><br><span class="line">    id <span class="type">INT</span> <span class="keyword">UNIQUE</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span> AUTO_INCREMENT, </span><br><span class="line">    lastname <span class="type">VARCHAR</span>(<span class="number">255</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>, </span><br><span class="line">    firstname <span class="type">VARCHAR</span>(<span class="number">255</span>), </span><br><span class="line">    age <span class="type">INT</span> <span class="keyword">DEFAULT</span> <span class="number">12</span>, </span><br><span class="line">    city <span class="type">VARCHAR</span>(<span class="number">255</span>) </span><br><span class="line">) AUTO_INCREMENT <span class="operator">=</span> <span class="number">5</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Tuple-Manipulation-元组操作"><a href="#Tuple-Manipulation-元组操作" class="headerlink" title="Tuple Manipulation(元组操作)"></a>Tuple Manipulation(元组操作)</h2><h3 id="INSERT"><a href="#INSERT" class="headerlink" title="INSERT"></a>INSERT</h3><ul>
+<li><p>添加一横排数据：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> tablename (col1, col2, …)</span><br><span class="line"><span class="keyword">VALUES</span> (val1, val2, …), </span><br><span class="line">    ...</span><br><span class="line">    (val1,val2,val3);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果每一列都要添加值，就不用一一列出来了：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> tablename <span class="keyword">VALUES</span> (val1, val2, …);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE"></a>UPDATE</h3><ul>
+<li>更新一横排数据：<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> table_name</span><br><span class="line"><span class="keyword">SET</span> col1 <span class="operator">=</span> val1 [,col2 <span class="operator">=</span> val2…]</span><br><span class="line">[<span class="keyword">WHERE</span> <span class="keyword">condition</span>]</span><br></pre></td></tr></table></figure></li>
+<li>关于condition：<br> - condition为true的横排，对应列的值都会改变；<br> - <strong>如果不给condition，所有横排都会被改变</strong>。</li>
+</ul>
+<h3 id="DELETE"><a href="#DELETE" class="headerlink" title="DELETE"></a>DELETE</h3><ul>
+<li>删除一横排数据：<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span></span><br><span class="line">    table_name </span><br><span class="line">    [<span class="keyword">WHERE</span> <span class="keyword">condition</span>]</span><br></pre></td></tr></table></figure></li>
+<li>condition同上。</li>
+</ul>
 <hr>
 <p>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
 ]]></content>
@@ -244,5 +331,10 @@
         <tag>CPT103</tag>
         <tag>Database</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>CPT102-L2-Huffman</title>
+    <url>/2024/03/06/CPT102-L2-Huffman/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
