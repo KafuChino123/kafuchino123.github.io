@@ -111,7 +111,7 @@
     <url>/2024/02/29/INT104-T1/</url>
     <content><![CDATA[<p>#INT104 #Python</p>
 <p>这节课，正式开始了我们本学期的Python学习之旅。Python是一种易于学习的“解释性语言”：不需要预先编译，可以快速开发和测试代码 —— 这也是为什么 Python 文件运行的速度要比 C 为代表的编译型语言快得多的主要原因。</p>
-<p>本篇文章总结了 tutorial 1 主要的语法知识点。（因为在这之前相信都有上学期的Java基础，所以以Python的语法特点为重点，对关键字的定义和用途不作过多解释。）</p>
+<p>本篇文章总结了 tutorial 1 主要的语法知识点。（因为在这之前相信都有上学期的Java基础，所以以Python的语法特点为重点，对关键字的定义和用途不作过多解释。）<br>（前排提示老师给的notebook上面有这些知识的汇总，看那个也行）</p>
 <h3 id="Variable-变量"><a href="#Variable-变量" class="headerlink" title="Variable (变量)"></a>Variable (变量)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="number">3</span></span><br><span class="line">y = <span class="number">4</span></span><br><span class="line">z = x * y</span><br><span class="line">answer = <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(answer)</span><br></pre></td></tr></table></figure>
 
 <h3 id="Types-类型"><a href="#Types-类型" class="headerlink" title="Types (类型)"></a>Types (类型)</h3><p><img src="/pictures/INT104-T1/types.png" alt="types" title="types" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
@@ -342,7 +342,7 @@
   <entry>
     <title>CPT102-L2-Huffman</title>
     <url>/2024/03/06/CPT102-L2-Huffman/</url>
-    <content><![CDATA[<p>#数据结构 #CPT102<br>鸽……</p>
+    <content><![CDATA[<p>#数据结构 #CPT102</p>
 ]]></content>
       <categories>
         <category>XJTLU</category>
@@ -368,7 +368,7 @@
     <title>INT104-T2-Python</title>
     <url>/2024/03/07/INT104-T2/</url>
     <content><![CDATA[<p>#INT104 #Python</p>
-<p>这次是 INT104 的第二节tutorial，<br>主要讲了一些操作符，if-else，循环和函数。<br>还是仅总结py特色的一些语法，比较简单不做详细解释。</p>
+<p>这次是 INT104 的第二节tutorial，<br>主要讲了一些操作符，if-else，循环和函数。<br>还是仅总结py特色的一些语法，比较简单不做详细解释。<br>(其实老师给的notebook上面都有，看那个也行)</p>
 <h3 id="Arithmetic-operations-算术操作符"><a href="#Arithmetic-operations-算术操作符" class="headerlink" title="Arithmetic operations(算术操作符)"></a>Arithmetic operations(算术操作符)</h3><p><img src="/pictures/INT104-T2/ao.png" alt="ao" title="ao" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <p>需要注意的是，python中求次方是用 <code>**</code>，还有一个操作符：<code>//</code>，用于执行 <strong>整数除法</strong> 操作。它将两个操作数（被除数和除数）转换为整数，然后进行除法运算，并返回 <strong>商的整数部分</strong> 。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">4</span> ** <span class="number">2</span>  <span class="comment"># 16</span></span><br><span class="line"><span class="number">7</span> // <span class="number">2</span>  <span class="comment"># 3</span></span><br></pre></td></tr></table></figure>
