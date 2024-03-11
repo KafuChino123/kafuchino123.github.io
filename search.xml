@@ -91,6 +91,13 @@
 <li><p>将报文构造成若干个更小的分组进行<strong>分组交换</strong>，比将整个报文进行报文交换的<strong>时延要小</strong>，并且还可以<strong>避免太长的报文长时间占用链路</strong>，<strong>有利于差错控制</strong>，同时具有更好的灵活性。</p>
 </li>
 </ul>
+<h2 id="计算机网络的定义和分类"><a href="#计算机网络的定义和分类" class="headerlink" title="计算机网络的定义和分类"></a>计算机网络的定义和分类</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><ul>
+<li>计算机网络早期的简单定义：是<strong>互联的</strong>，<strong>自治的计算机集合</strong>。</li>
+</ul>
+<p><img src="/pictures/ComNet-C1/%E4%BA%92%E8%BF%9E.png" alt="互连" title="互连" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<ul>
+<li>现阶段一个较好的定义：计算机网络主要是由一些通用的，可编程的硬件互连而成的，而这些硬件并非专门用来实现某一特定目的</li>
+</ul>
 ]]></content>
       <categories>
         <category>计算机网络</category>
@@ -335,7 +342,7 @@
   <entry>
     <title>CPT102-L2-Huffman</title>
     <url>/2024/03/06/CPT102-L2-Huffman/</url>
-    <content><![CDATA[<p>#数据结构 #CPT102</p>
+    <content><![CDATA[<p>#数据结构 #CPT102<br>鸽……</p>
 ]]></content>
       <categories>
         <category>XJTLU</category>
@@ -343,6 +350,31 @@
       <tags>
         <tag>数据结构</tag>
         <tag>CPT102</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>EEE104-L2-Binary</title>
+    <url>/2024/03/06/EEE104-L2-Binary/</url>
+    <content><![CDATA[<p>#EEE103<br>鸽……</p>
+]]></content>
+      <categories>
+        <category>XJTLU</category>
+      </categories>
+      <tags>
+        <tag>EEE103</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>INT104-T2-Python</title>
+    <url>/2024/03/07/INT104-T2/</url>
+    <content><![CDATA[<p>#INT104 #Python<br>鸽……</p>
+]]></content>
+      <categories>
+        <category>XJTLU</category>
+      </categories>
+      <tags>
+        <tag>INT104</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
 </search>
