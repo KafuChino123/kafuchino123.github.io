@@ -7,21 +7,23 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="#EEE103">
+<meta name="description" content="#EEE104 在学习二进制时（没想到学二进制竟然是在EEE的课上，有点难绷），在二进制的原码、补码、反码和取反操作上碰到了一些问题。经过和 @b1n、 @suchen 的讨论，疑团才算一一解开，在这里简单记录总结一下。 首先，直接划重点： 取反是一定0变1，1变0； 正数的反码不是正数取反得到的； 负数的反码是正数取反得到的； 取反+1是得到负数的补码，不是原码； 要得到负数的原码直接将其绝对值">
 <meta property="og:type" content="article">
-<meta property="og:title" content="EEE104-L2-Binary">
+<meta property="og:title" content="关于学习二进制时碰到的一些小细节">
 <meta property="og:url" content="https://kafuchino123.github.io/2024/03/06/EEE104-L2-Binary/index.html">
 <meta property="og:site_name" content="Raspberry.的个人博客">
-<meta property="og:description" content="#EEE103">
+<meta property="og:description" content="#EEE104 在学习二进制时（没想到学二进制竟然是在EEE的课上，有点难绷），在二进制的原码、补码、反码和取反操作上碰到了一些问题。经过和 @b1n、 @suchen 的讨论，疑团才算一一解开，在这里简单记录总结一下。 首先，直接划重点： 取反是一定0变1，1变0； 正数的反码不是正数取反得到的； 负数的反码是正数取反得到的； 取反+1是得到负数的补码，不是原码； 要得到负数的原码直接将其绝对值">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://kafuchino123.github.io/img/404.jpg">
 <meta property="article:published_time" content="2024-03-06T15:24:19.000Z">
-<meta property="article:modified_time" content="2024-03-11T14:20:00.515Z">
+<meta property="article:modified_time" content="2024-03-12T17:12:51.882Z">
 <meta property="article:author" content="Raspberry">
-<meta property="article:tag" content="EEE103">
+<meta property="article:tag" content="EEE104">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kafuchino123.github.io/img/404.jpg">
 
 
-<title >EEE104-L2-Binary</title>
+<title >关于学习二进制时碰到的一些小细节</title>
 
 <!-- Favicon -->
 
@@ -64,7 +66,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"kafuchino123.github.io","author":"Raspberry","root":"/","typed_text":["计算寄大学牲..."],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/pictures/default/log.svg","icon16":"/pictures/default/log.svg","icon32":"/pictures/default/log.svg","appleTouchIcon":"/pictures/default/log.svg","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms","author":"Post author: ","copyright_link":"Post link: ","copyright_license_title":"Copyright Notice: ","copyright_license_content":"All articles in this blog are licensed under undefined unless otherwise stated.","copy_success":"Copied","copy_failure":"Copy failed","open_read_mode":"Enter reading mode","exit_read_mode":"Exit reading mode","notice_outdate_message":"It has been undefined days since the last update, the content of the article may be outdated.","sticky":"TOP","just":"Just","min":"minutes ago","hour":"hours ago","day":"days ago","month":"months ago"},"swup":false,"plugin":{"flickr_justified_gallery":"https://npm.elemecdn.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"toc":{"post_title":true},"live_time":{"start_time":"02/20/2024 15:00:00","prefix":"The blog has been lovely to run undefined day"},"covers":["/pictures/default/random1.jpg","/pictures/default/random2.jpg","/pictures/default/random3.jpg","/pictures/default/random4.jpg","/pictures/default/random5.jpg","/pictures/default/random6.jpg","/pictures/default/random7.jpg"],"search":{"enable":true,"type":"local","href":"https://www.google.com/search?q=site:","domain":null,"trigger":"auto","path":"search.xml"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-11 22:20:00"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-13 01:12:51"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -248,7 +250,7 @@
                             NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            EEE104-L2-Binary
+                            关于学习二进制时碰到的一些小细节
                         </h1>
 
                         
@@ -403,7 +405,29 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <p>#EEE103</p>
+    <p>#EEE104</p>
+<p>在学习二进制时（没想到学二进制竟然是在EEE的课上，有点难绷），在二进制的原码、补码、反码和取反操作上碰到了一些问题。<br>经过和 <a target="_blank" rel="noopener" href="https://breezyb1n.github.io/">@b1n</a>、 <a target="_blank" rel="noopener" href="http://chiran.top/">@suchen</a> 的讨论，疑团才算一一解开，在这里简单记录总结一下。</p>
+<h3 id="首先，直接划重点："><a href="#首先，直接划重点：" class="headerlink" title="首先，直接划重点："></a>首先，直接划重点：</h3><ul>
+<li>取反是一定0变1，1变0；</li>
+<li>正数的反码不是正数取反得到的；</li>
+<li>负数的反码是正数取反得到的；</li>
+<li>取反+1是得到负数的补码，不是原码；</li>
+<li>要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了。</li>
+</ul>
+<p>接下来，一一解释这五点：</p>
+<h3 id="取反是一定0变1，1变0。"><a href="#取反是一定0变1，1变0。" class="headerlink" title="取反是一定0变1，1变0。"></a>取反是一定0变1，1变0。</h3><p> - 二进制取反，又称二进制反码运算，是指对二进制数的每一位进行取反，即0变为1，1变为0。</p>
+<p>之前疑惑的点是：既然取反一定是0变1，1变0，那么为什么整数的反码和原码是一样的呢？</p>
+<p><img src="/pictures/EEE104-L2-Binary/yfb.jpg" alt="原码补码反码" title="原码补码反码" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>这就要说到第二点了：</p>
+<h3 id="正数的反码不是正数取反得到的："><a href="#正数的反码不是正数取反得到的：" class="headerlink" title="正数的反码不是正数取反得到的："></a>正数的反码不是正数取反得到的：</h3><p> - <strong>正数的原码，反码，补码均相同</strong>，正数的反码就是原码，补码与原码相同。</p>
+<h3 id="负数的反码是正数取反得到的："><a href="#负数的反码是正数取反得到的：" class="headerlink" title="负数的反码是正数取反得到的："></a>负数的反码是正数取反得到的：</h3><p> - 负数的反码等于负数的原码符号位不变，数值位取反的二进制数，正数取反是对正数的二进制数原码的每一位进行取反，得到的就是对应负数的反码。</p>
+<h3 id="取反-1是得到负数的补码，不是原码："><a href="#取反-1是得到负数的补码，不是原码：" class="headerlink" title="取反+1是得到负数的补码，不是原码："></a>取反+1是得到负数的补码，不是原码：</h3><p> - 我们一般说为了得到一个负数的二进制数，通常是对应正数的二进制数取反再+1 —— 这里正数的二进制数通常就是正数的原码(不过正数的原补反其实都一样)，而得到的负数的二进制数通常是其补码，而涉及到负数的计算，一般都使用负数的补码。</p>
+<h3 id="要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："><a href="#要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了：" class="headerlink" title="要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："></a>要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了：</h3><p> - 上面的图表已经显示的很明白了，负数的原码其实就是正数的原码直接最高位 0 变 1 即可。但是似乎并没有太大用，因为涉及到负数计算似乎还是用补码。</p>
+<ul>
+<li>综上，原码通常最好理解，能快速对应其十进制的数值 —— 但是如果涉及到计算，尤其是涉及到负数的，我们通常用补码来计算。补码除了理解会困难些，似乎没有什么不好了。</li>
+</ul>
+<hr>
+<p>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
 
 </article>
     
@@ -470,7 +494,7 @@
             </div>
             <h5>
                 <a href="/2024/03/06/CPT102-L2-Huffman/" class="trm-anima-link">
-                    CPT102-L2-Huffman
+                    详细图解哈夫曼Huffman编码树
                 </a>
             </h5>
             <div class="trm-divider trm-mb-20 trm-mt-20"></div>
@@ -478,7 +502,7 @@
                 <li>24/03/06</li>
                 <li>11:56</li>
                 
-                    <li>5</li>
+                    <li>1.1k</li>
                 
                 
             </ul>
@@ -536,8 +560,24 @@
 
             
 
+    <div id="post-toc" class="trm-post-toc">
+      <div class="trm-post-toc-header">
+        Article table of contents
+				<span id="post-toc-top">
+					TOP
+				</span>
+      </div>
+      <div class="trm-post-toc-content">
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-3" title="首先，直接划重点："><a rel="nofollow" class="trm-toc-link" href="#首先，直接划重点："><span class="trm-toc-number">1.</span> <span class="trm-toc-text">首先，直接划重点：</span></a></li><li class="trm-toc-item trm-toc-level-3" title="取反是一定0变1，1变0。"><a rel="nofollow" class="trm-toc-link" href="#取反是一定0变1，1变0。"><span class="trm-toc-number">2.</span> <span class="trm-toc-text">取反是一定0变1，1变0。</span></a></li><li class="trm-toc-item trm-toc-level-3" title="正数的反码不是正数取反得到的："><a rel="nofollow" class="trm-toc-link" href="#正数的反码不是正数取反得到的："><span class="trm-toc-number">3.</span> <span class="trm-toc-text">正数的反码不是正数取反得到的：</span></a></li><li class="trm-toc-item trm-toc-level-3" title="负数的反码是正数取反得到的："><a rel="nofollow" class="trm-toc-link" href="#负数的反码是正数取反得到的："><span class="trm-toc-number">4.</span> <span class="trm-toc-text">负数的反码是正数取反得到的：</span></a></li><li class="trm-toc-item trm-toc-level-3" title="取反+1是得到负数的补码，不是原码："><a rel="nofollow" class="trm-toc-link" href="#取反-1是得到负数的补码，不是原码："><span class="trm-toc-number">5.</span> <span class="trm-toc-text">取反+1是得到负数的补码，不是原码：</span></a></li><li class="trm-toc-item trm-toc-level-3" title="要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："><a rel="nofollow" class="trm-toc-link" href="#要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："><span class="trm-toc-number">6.</span> <span class="trm-toc-text">要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了：</span></a></li></ol>
+      </div>
+    </div>
+
             
 <div class="trm-fixed-container">
+    
+        <div class="trm-fixed-btn post-toc-btn" data-title="Open toc">
+            <i class="iconfont fas fa-th-list"></i>
+        </div>
     
     
         <div class="trm-fixed-btn" data-title="Read Mode" onclick="asyncFun.switchReadMode()">
