@@ -254,7 +254,7 @@
   <entry>
     <title>EEE104-L2-Binary</title>
     <url>/2024/03/06/EEE104-L2-Binary/</url>
-    <content><![CDATA[<p>#EEE103<br>鸽……</p>
+    <content><![CDATA[<p>#EEE103</p>
 ]]></content>
       <categories>
         <category>XJTLU</category>
@@ -412,6 +412,18 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>swiftUI中生成弹窗警告的一些理解</title>
+    <url>/2024/03/11/swiftWarning/</url>
+    <content><![CDATA[<p># Swift</p>
+]]></content>
+      <categories>
+        <category>Swift</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
       </tags>
   </entry>
 </search>
