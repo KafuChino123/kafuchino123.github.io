@@ -205,40 +205,6 @@
       </tags>
   </entry>
   <entry>
-    <title>关于学习二进制时碰到的一些小细节</title>
-    <url>/2024/03/06/EEE104-L2-Binary/</url>
-    <content><![CDATA[<p>#EEE104</p>
-<p>在学习二进制时（没想到学二进制竟然是在EEE的课上，有点难绷），在二进制的原码、补码、反码和取反操作上碰到了一些问题。<br>经过和 <a href="https://breezyb1n.github.io/">@b1n</a>、 <a href="http://chiran.top/">@suchen</a> 的讨论，疑团才算一一解开，在这里简单记录总结一下。</p>
-<h3 id="首先，直接划重点："><a href="#首先，直接划重点：" class="headerlink" title="首先，直接划重点："></a>首先，直接划重点：</h3><ul>
-<li>取反是一定0变1，1变0；</li>
-<li>正数的反码不是正数取反得到的；</li>
-<li>负数的反码是正数取反得到的；</li>
-<li>取反+1是得到负数的补码，不是原码；</li>
-<li>要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了。</li>
-</ul>
-<p>接下来，一一解释这五点：</p>
-<h3 id="取反是一定0变1，1变0。"><a href="#取反是一定0变1，1变0。" class="headerlink" title="取反是一定0变1，1变0。"></a>取反是一定0变1，1变0。</h3><p> - 二进制取反，又称二进制反码运算，是指对二进制数的每一位进行取反，即0变为1，1变为0。</p>
-<p>之前疑惑的点是：既然取反一定是0变1，1变0，那么为什么整数的反码和原码是一样的呢？</p>
-<p><img src="/pictures/EEE104-L2-Binary/yfb.jpg" alt="原码补码反码" title="原码补码反码" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>这就要说到第二点了：</p>
-<h3 id="正数的反码不是正数取反得到的："><a href="#正数的反码不是正数取反得到的：" class="headerlink" title="正数的反码不是正数取反得到的："></a>正数的反码不是正数取反得到的：</h3><p> - <strong>正数的原码，反码，补码均相同</strong>，正数的反码就是原码，补码与原码相同。</p>
-<h3 id="负数的反码是正数取反得到的："><a href="#负数的反码是正数取反得到的：" class="headerlink" title="负数的反码是正数取反得到的："></a>负数的反码是正数取反得到的：</h3><p> - 负数的反码等于负数的原码符号位不变，数值位取反的二进制数，正数取反是对正数的二进制数原码的每一位进行取反，得到的就是对应负数的反码。</p>
-<h3 id="取反-1是得到负数的补码，不是原码："><a href="#取反-1是得到负数的补码，不是原码：" class="headerlink" title="取反+1是得到负数的补码，不是原码："></a>取反+1是得到负数的补码，不是原码：</h3><p> - 我们一般说为了得到一个负数的二进制数，通常是对应正数的二进制数取反再+1 —— 这里正数的二进制数通常就是正数的原码(不过正数的原补反其实都一样)，而得到的负数的二进制数通常是其补码，而涉及到负数的计算，一般都使用负数的补码。</p>
-<h3 id="要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："><a href="#要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了：" class="headerlink" title="要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："></a>要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了：</h3><p> - 上面的图表已经显示的很明白了，负数的原码其实就是正数的原码直接最高位 0 变 1 即可。但是似乎并没有太大用，因为涉及到负数计算似乎还是用补码。</p>
-<ul>
-<li>综上，原码通常最好理解，能快速对应其十进制的数值 —— 但是如果涉及到计算，尤其是涉及到负数的，我们通常用补码来计算。补码除了理解会困难些，似乎没有什么不好了。</li>
-</ul>
-<hr>
-<p>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
-]]></content>
-      <categories>
-        <category>XJTLU</category>
-      </categories>
-      <tags>
-        <tag>EEE104</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>计算机网络自学笔记-第一章</title>
     <url>/2024/03/02/ComNet-C1/</url>
     <content><![CDATA[<p>#计算机网络</p>
@@ -314,6 +280,40 @@
       </categories>
       <tags>
         <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于学习二进制时碰到的一些小细节</title>
+    <url>/2024/03/06/EEE104-L2-Binary/</url>
+    <content><![CDATA[<p>#EEE104</p>
+<p>在学习二进制时（没想到学二进制竟然是在EEE的课上，有点难绷），在二进制的原码、补码、反码和取反操作上碰到了一些问题。<br>经过和 <a href="https://breezyb1n.github.io/">@b1n</a>、 <a href="http://chiran.top/">@suchen</a> 的讨论，疑团才算一一解开，在这里简单记录总结一下。</p>
+<h3 id="首先，直接划重点："><a href="#首先，直接划重点：" class="headerlink" title="首先，直接划重点："></a>首先，直接划重点：</h3><ul>
+<li>取反是一定0变1，1变0；</li>
+<li>正数的反码不是正数取反得到的；</li>
+<li>负数的反码是正数取反得到的；</li>
+<li>取反+1是得到负数的补码，不是原码；</li>
+<li>要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了。</li>
+</ul>
+<p>接下来，一一解释这五点：</p>
+<h3 id="取反是一定0变1，1变0。"><a href="#取反是一定0变1，1变0。" class="headerlink" title="取反是一定0变1，1变0。"></a>取反是一定0变1，1变0。</h3><p> - 二进制取反，又称二进制反码运算，是指对二进制数的每一位进行取反，即0变为1，1变为0。</p>
+<p>之前疑惑的点是：既然取反一定是0变1，1变0，那么为什么整数的反码和原码是一样的呢？</p>
+<p><img src="/pictures/EEE104-L2-Binary/yfb.jpg" alt="原码补码反码" title="原码补码反码" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>这就要说到第二点了：</p>
+<h3 id="正数的反码不是正数取反得到的："><a href="#正数的反码不是正数取反得到的：" class="headerlink" title="正数的反码不是正数取反得到的："></a>正数的反码不是正数取反得到的：</h3><p> - <strong>正数的原码，反码，补码均相同</strong>，正数的反码就是原码，补码与原码相同。</p>
+<h3 id="负数的反码是正数取反得到的："><a href="#负数的反码是正数取反得到的：" class="headerlink" title="负数的反码是正数取反得到的："></a>负数的反码是正数取反得到的：</h3><p> - 负数的反码等于负数的原码符号位不变，数值位取反的二进制数，正数取反是对正数的二进制数原码的每一位进行取反，得到的就是对应负数的反码。</p>
+<h3 id="取反-1是得到负数的补码，不是原码："><a href="#取反-1是得到负数的补码，不是原码：" class="headerlink" title="取反+1是得到负数的补码，不是原码："></a>取反+1是得到负数的补码，不是原码：</h3><p> - 我们一般说为了得到一个负数的二进制数，通常是对应正数的二进制数取反再+1 —— 这里正数的二进制数通常就是正数的原码(不过正数的原补反其实都一样)，而得到的负数的二进制数通常是其补码，而涉及到负数的计算，一般都使用负数的补码。</p>
+<h3 id="要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："><a href="#要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了：" class="headerlink" title="要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："></a>要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了：</h3><p> - 上面的图表已经显示的很明白了，负数的原码其实就是正数的原码直接最高位 0 变 1 即可。但是似乎并没有太大用，因为涉及到负数计算似乎还是用补码。</p>
+<ul>
+<li>综上，原码通常最好理解，能快速对应其十进制的数值 —— 但是如果涉及到计算，尤其是涉及到负数的，我们通常用补码来计算。补码除了理解会困难些，似乎没有什么不好了。</li>
+</ul>
+<hr>
+<p>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
+]]></content>
+      <categories>
+        <category>XJTLU</category>
+      </categories>
+      <tags>
+        <tag>EEE104</tag>
       </tags>
   </entry>
   <entry>
@@ -401,7 +401,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Python解决斐波那契数列时的几个方法</title>
+    <title>Python解决斐波那契数列的几个方法</title>
     <url>/2024/03/14/INT104-T3/</url>
     <content><![CDATA[<p>#INT104 #Python</p>
 <p>斐波那契数列是一个非常经典的数列，它的定义是：第0项为0，第1项为1，从第2项开始，每一项都等于前两项之和。</p>
@@ -469,30 +469,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World - The first post!</title>
-    <url>/2024/02/20/hello-world/</url>
-    <content><![CDATA[<p>#Hexo<br>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Swift 中 struct 和 class 的区别</title>
     <url>/2024/03/02/diffBetweenSC/</url>
     <content><![CDATA[<p>#Swift</p>
@@ -533,6 +509,30 @@
       </categories>
       <tags>
         <tag>Swift</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World - The first post!</title>
+    <url>/2024/02/20/hello-world/</url>
+    <content><![CDATA[<p>#Hexo<br>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
