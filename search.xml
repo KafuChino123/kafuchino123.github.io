@@ -205,6 +205,40 @@
       </tags>
   </entry>
   <entry>
+    <title>关于学习二进制时碰到的一些小细节</title>
+    <url>/2024/03/06/EEE104-L2-Binary/</url>
+    <content><![CDATA[<p>#EEE104</p>
+<p>在学习二进制时（没想到学二进制竟然是在EEE的课上，有点难绷），在二进制的原码、补码、反码和取反操作上碰到了一些问题。<br>经过和 <a href="https://breezyb1n.github.io/">@b1n</a>、 <a href="http://chiran.top/">@suchen</a> 的讨论，疑团才算一一解开，在这里简单记录总结一下。</p>
+<h3 id="首先，直接划重点："><a href="#首先，直接划重点：" class="headerlink" title="首先，直接划重点："></a>首先，直接划重点：</h3><ul>
+<li>取反是一定0变1，1变0；</li>
+<li>正数的反码不是正数取反得到的；</li>
+<li>负数的反码是正数取反得到的；</li>
+<li>取反+1是得到负数的补码，不是原码；</li>
+<li>要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了。</li>
+</ul>
+<p>接下来，一一解释这五点：</p>
+<h3 id="取反是一定0变1，1变0。"><a href="#取反是一定0变1，1变0。" class="headerlink" title="取反是一定0变1，1变0。"></a>取反是一定0变1，1变0。</h3><p> - 二进制取反，又称二进制反码运算，是指对二进制数的每一位进行取反，即0变为1，1变为0。</p>
+<p>之前疑惑的点是：既然取反一定是0变1，1变0，那么为什么整数的反码和原码是一样的呢？</p>
+<p><img src="/pictures/EEE104-L2-Binary/yfb.jpg" alt="原码补码反码" title="原码补码反码" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>这就要说到第二点了：</p>
+<h3 id="正数的反码不是正数取反得到的："><a href="#正数的反码不是正数取反得到的：" class="headerlink" title="正数的反码不是正数取反得到的："></a>正数的反码不是正数取反得到的：</h3><p> - <strong>正数的原码，反码，补码均相同</strong>，正数的反码就是原码，补码与原码相同。</p>
+<h3 id="负数的反码是正数取反得到的："><a href="#负数的反码是正数取反得到的：" class="headerlink" title="负数的反码是正数取反得到的："></a>负数的反码是正数取反得到的：</h3><p> - 负数的反码等于负数的原码符号位不变，数值位取反的二进制数，正数取反是对正数的二进制数原码的每一位进行取反，得到的就是对应负数的反码。</p>
+<h3 id="取反-1是得到负数的补码，不是原码："><a href="#取反-1是得到负数的补码，不是原码：" class="headerlink" title="取反+1是得到负数的补码，不是原码："></a>取反+1是得到负数的补码，不是原码：</h3><p> - 我们一般说为了得到一个负数的二进制数，通常是对应正数的二进制数取反再+1 —— 这里正数的二进制数通常就是正数的原码(不过正数的原补反其实都一样)，而得到的负数的二进制数通常是其补码，而涉及到负数的计算，一般都使用负数的补码。</p>
+<h3 id="要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："><a href="#要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了：" class="headerlink" title="要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："></a>要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了：</h3><p> - 上面的图表已经显示的很明白了，负数的原码其实就是正数的原码直接最高位 0 变 1 即可。但是似乎并没有太大用，因为涉及到负数计算似乎还是用补码。</p>
+<ul>
+<li>综上，原码通常最好理解，能快速对应其十进制的数值 —— 但是如果涉及到计算，尤其是涉及到负数的，我们通常用补码来计算。补码除了理解会困难些，似乎没有什么不好了。</li>
+</ul>
+<hr>
+<p>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
+]]></content>
+      <categories>
+        <category>XJTLU</category>
+      </categories>
+      <tags>
+        <tag>EEE104</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机网络自学笔记-第一章</title>
     <url>/2024/03/02/ComNet-C1/</url>
     <content><![CDATA[<p>#计算机网络</p>
@@ -280,40 +314,6 @@
       </categories>
       <tags>
         <tag>计算机网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于学习二进制时碰到的一些小细节</title>
-    <url>/2024/03/06/EEE104-L2-Binary/</url>
-    <content><![CDATA[<p>#EEE104</p>
-<p>在学习二进制时（没想到学二进制竟然是在EEE的课上，有点难绷），在二进制的原码、补码、反码和取反操作上碰到了一些问题。<br>经过和 <a href="https://breezyb1n.github.io/">@b1n</a>、 <a href="http://chiran.top/">@suchen</a> 的讨论，疑团才算一一解开，在这里简单记录总结一下。</p>
-<h3 id="首先，直接划重点："><a href="#首先，直接划重点：" class="headerlink" title="首先，直接划重点："></a>首先，直接划重点：</h3><ul>
-<li>取反是一定0变1，1变0；</li>
-<li>正数的反码不是正数取反得到的；</li>
-<li>负数的反码是正数取反得到的；</li>
-<li>取反+1是得到负数的补码，不是原码；</li>
-<li>要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了。</li>
-</ul>
-<p>接下来，一一解释这五点：</p>
-<h3 id="取反是一定0变1，1变0。"><a href="#取反是一定0变1，1变0。" class="headerlink" title="取反是一定0变1，1变0。"></a>取反是一定0变1，1变0。</h3><p> - 二进制取反，又称二进制反码运算，是指对二进制数的每一位进行取反，即0变为1，1变为0。</p>
-<p>之前疑惑的点是：既然取反一定是0变1，1变0，那么为什么整数的反码和原码是一样的呢？</p>
-<p><img src="/pictures/EEE104-L2-Binary/yfb.jpg" alt="原码补码反码" title="原码补码反码" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>这就要说到第二点了：</p>
-<h3 id="正数的反码不是正数取反得到的："><a href="#正数的反码不是正数取反得到的：" class="headerlink" title="正数的反码不是正数取反得到的："></a>正数的反码不是正数取反得到的：</h3><p> - <strong>正数的原码，反码，补码均相同</strong>，正数的反码就是原码，补码与原码相同。</p>
-<h3 id="负数的反码是正数取反得到的："><a href="#负数的反码是正数取反得到的：" class="headerlink" title="负数的反码是正数取反得到的："></a>负数的反码是正数取反得到的：</h3><p> - 负数的反码等于负数的原码符号位不变，数值位取反的二进制数，正数取反是对正数的二进制数原码的每一位进行取反，得到的就是对应负数的反码。</p>
-<h3 id="取反-1是得到负数的补码，不是原码："><a href="#取反-1是得到负数的补码，不是原码：" class="headerlink" title="取反+1是得到负数的补码，不是原码："></a>取反+1是得到负数的补码，不是原码：</h3><p> - 我们一般说为了得到一个负数的二进制数，通常是对应正数的二进制数取反再+1 —— 这里正数的二进制数通常就是正数的原码(不过正数的原补反其实都一样)，而得到的负数的二进制数通常是其补码，而涉及到负数的计算，一般都使用负数的补码。</p>
-<h3 id="要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："><a href="#要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了：" class="headerlink" title="要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："></a>要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了：</h3><p> - 上面的图表已经显示的很明白了，负数的原码其实就是正数的原码直接最高位 0 变 1 即可。但是似乎并没有太大用，因为涉及到负数计算似乎还是用补码。</p>
-<ul>
-<li>综上，原码通常最好理解，能快速对应其十进制的数值 —— 但是如果涉及到计算，尤其是涉及到负数的，我们通常用补码来计算。补码除了理解会困难些，似乎没有什么不好了。</li>
-</ul>
-<hr>
-<p>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
-]]></content>
-      <categories>
-        <category>XJTLU</category>
-      </categories>
-      <tags>
-        <tag>EEE104</tag>
       </tags>
   </entry>
   <entry>
@@ -401,6 +401,61 @@
       </tags>
   </entry>
   <entry>
+    <title>Python解决斐波那契数列时的几个方法</title>
+    <url>/2024/03/14/INT104-T3/</url>
+    <content><![CDATA[<p>#INT104 #Python</p>
+<p>斐波那契数列是一个非常经典的数列，它的定义是：第0项为0，第1项为1，从第2项开始，每一项都等于前两项之和。</p>
+<p>但是我们正常来说是不用第0项的，是从第一项开始。</p>
+<p>所以他的形式是：[1, 1, 2, 3, 5, 8, 13, 21]。</p>
+<p>在 INT104 的 Tutorial 3 上，我发现老师的解法，我的解法，copilot的解法，朋友的解法全都不尽相同。这就很有意思了，所以就想写一篇博客来汇总一下。</p>
+<p>在此总结4种使用Python的解法：</p>
+<h3 id="1-递归"><a href="#1-递归" class="headerlink" title="1. 递归"></a>1. 递归</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fibonacci</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n &lt;= <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> n</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> fibonacci(n - <span class="number">1</span>) + fibonacci(n - <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">generateFibonacciList</span>(<span class="params">n</span>):</span><br><span class="line">    numList = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):</span><br><span class="line">        numList.append(fibonacci(i))</span><br><span class="line">    <span class="keyword">return</span> numList</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(generateFibonacciList(<span class="number">8</span>))</span><br><span class="line"><span class="comment"># [1, 1, 2, 3, 5, 8, 13, 21]</span></span><br></pre></td></tr></table></figure>
+
+<p>首先，我们定义了一个递归函数 <code>fibonacci</code>，它接受一个参数 <code>n</code>，如果 <code>n</code> 小于等于1，就返回 <code>n</code>，否则返回 <code>fibonacci(n - 1) + fibonacci(n - 2)</code>，利用递归，让前两位数字相加，来生成后一位数。这个<code>n</code>就是指生成的数列的第n项。</p>
+<p>然后我们定义了一个函数 <code>generateFibonacciList</code>，用来把函数<code>fibonacci</code>生成的数字加入到数组<code>numList</code>里，并在最后得以返回这个数组。在调用时，我们传入 <code>8</code>，就会返回 <code>[1, 1, 2, 3, 5, 8, 13, 21]</code>，一个长度为8的斐波那契数列。</p>
+<h3 id="2-循环"><a href="#2-循环" class="headerlink" title="2. 循环"></a>2. 循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fibonacci</span>(<span class="params">n</span>):</span><br><span class="line">    numList = []</span><br><span class="line">    <span class="keyword">while</span> <span class="built_in">len</span>(numList) &lt; n:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(numList) &lt; <span class="number">2</span>:</span><br><span class="line">            numList.append(<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            numList.append(numList[-<span class="number">1</span>] + numList[-<span class="number">2</span>])  <span class="comment"># -1表示最后一个元素，-2表示倒数第二个元素</span></span><br><span class="line">    <span class="keyword">return</span> numList</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(fibonacci(<span class="number">8</span>))</span><br><span class="line"><span class="comment"># [1, 1, 2, 3, 5, 8, 13, 21]</span></span><br></pre></td></tr></table></figure>
+
+<p>这个方法理论上应该是最容易想的，相对来说也是最好写的方法 —— 使用<code>while</code>循环来生成斐波那契数列：定义一个函数 <code>fibonacci</code>，它接受一个参数 <code>n</code>，在<code>numList</code>长度不够<code>n</code>时，执行循环，而在数列前两位一定是[1, 1]，所以在这两位直接<code>numList.append(1)</code>；在大于两位后的位置，我们再使用斐波那契数列的原理 —— 这个位的数字等于前两个位的数相加。最后返回一个长度为 <code>n</code> 的斐波那契数列。在调用时，我们传入 <code>8</code>，就会返回 <code>[1, 1, 2, 3, 5, 8, 13, 21]</code>，一个长度为8的斐波那契数列。</p>
+<p>值得一提的是，在Python中，<code>numList[-1]</code>表示该数列的最后一位，<code>numList[-2]</code>表示倒数第二位。</p>
+<h3 id="3-for-range"><a href="#3-for-range" class="headerlink" title="3. for + range"></a>3. for + range</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fibonacci</span>(<span class="params">num</span>):</span><br><span class="line">    fib_list = [<span class="number">1</span>, <span class="number">1</span>]  <span class="comment"># initialize the list with the first two fibonacci numbers</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, num):</span><br><span class="line">        fib_list.append(fib_list[i - <span class="number">1</span>] + fib_list[i - <span class="number">2</span>])  <span class="comment"># calculate the next fibonacci number</span></span><br><span class="line">    <span class="keyword">return</span> fib_list[:num]  <span class="comment"># return the first &#x27;num&#x27; fibonacci numbers</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(fibonacci(<span class="number">8</span>))</span><br><span class="line"><span class="comment"># [1, 1, 2, 3, 5, 8, 13, 21]</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(fibonacci(<span class="number">1</span>))</span><br><span class="line"><span class="comment"># [1]</span></span><br></pre></td></tr></table></figure>
+
+<p>这个是我本人最喜欢的一个解法：巧妙的使用<code>range</code>。</p>
+<p>首先，我们定义一个初始的斐波那契数列：<code>fib_list = [1, 1]</code>，然后在此基础上我们在后面利用<code>for</code>循环添加下一位数即可。</p>
+<p>那么，你可能会有疑问：如果我 num &#x3D; 1 呢？<code>range</code>里面岂不是<code>range(2, 1)</code>了，而且数列初始值就已经有2个数字了，他怎么可能会给我<code>[1]</code>呢？</p>
+<p>这就要提到Python里面的一些独特的小东西了：</p>
+<ol>
+<li><code>range(a, b)</code>：用于生成一个从a开始到b结束（不包括b）的整数序列。步长默认为1，即从a开始，每次加1，直到b-1，最后返回一个从a开始到b结束（不包括b）的整数序列。参数a为起始值，默认为0；b为结束值，不包含在内。<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 生成从0到9的整数序列</span></span><br><span class="line"><span class="built_in">range</span>(<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成从1到5的整数序列</span></span><br><span class="line"><span class="built_in">range</span>(<span class="number">1</span>, <span class="number">5</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成从2到10，步长为2的整数序列</span></span><br><span class="line"><span class="built_in">range</span>(<span class="number">2</span>, <span class="number">10</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure></li>
+<li><code>list[:num]</code>：这个是Python里面的切片操作，<code>list</code>是一个列表，<code>list[:num]</code>表示从列表的第一个元素开始，到第<code>num</code>个元素结束，不包括第<code>num</code>个元素。</li>
+</ol>
+<ul>
+<li>那么有意思的来了，如果我们把<code>num</code>的值设为1，即<code>range(2, 1)</code>，会发生什么呢？</li>
+</ul>
+<p>- 会生成一个从 2 开始，到 1 结束（不包括 1）的整数序列。但是，由于 2 大于 1，<strong>因此这个序列是空的</strong>。空序列的长度为 0，因此<code>for</code>循环体不会执行任何代码，也就是<code>fib_list</code>仍然是<code>[1,1]</code>。</p>
+<ul>
+<li>那我们为什么没有返回一个<code>[1,1]</code>呢？</li>
+</ul>
+<p>- 因为我们在最后使用了<code>fib_list[:num]</code>，它会返回一个从列表的第一个元素开始，到第<code>num</code>个元素结束，不包括第<code>num</code>个元素。所以，当<code>num</code>为1时，它只会返回该数列的第0位，即<code>[1]</code>。</p>
+<h3 id="4-生成器"><a href="#4-生成器" class="headerlink" title="4. 生成器"></a>4. 生成器</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fibonacci</span>(<span class="params">n</span>):</span><br><span class="line">    a, b = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="keyword">yield</span> a</span><br><span class="line">        a, b = b, a + b</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(fibonacci(<span class="number">8</span>)))  </span><br><span class="line"><span class="comment"># [1, 1, 2, 3, 5, 8, 13, 21]</span></span><br></pre></td></tr></table></figure>
+
+<p>这个方法就更“Python”了：我们使用了生成器<code>yield</code>。</p>
+<ul>
+<li><code>yield</code>是什么？</li>
+</ul>
+<p>- <code>yield</code>是一个类似<code>return</code>的关键字，只是这个函数返回的是一个生成器。生成器是一个特殊的迭代器，它的值是在运行时生成的。生成器的好处是它不会一次性把所有的值都生成出来，而是在需要的时候才生成，可以节省内存。</p>
+<p>使用<code>yield</code>，每次迭代都让<code>a</code>和<code>b</code>相加，然后把<code>a</code>的值<code>yield</code>出来，然后再把<code>a</code>和<code>b</code>的值交换，再相加，再<code>yield</code>出来……直到<code>range(n)</code>结束。</p>
+<p>同样值得一提的是，如果我们在这个方法里让 <code>n = 1</code>，我们就只会<code>yield</code>一个<code>a = 1</code>，最后<code>list(1)</code>，同样可以只得到一个<code>[1]</code>。十分的巧妙，十分的Python。</p>
+<hr>
+<p>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
+]]></content>
+      <categories>
+        <category>XJTLU</category>
+      </categories>
+      <tags>
+        <tag>INT104</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于舞萌DX超级救护车的紫谱谱面的见解和鸟加心得</title>
     <url>/2024/03/13/SUPERAMBULANCE/</url>
     <content><![CDATA[<p>#舞萌DX</p>
@@ -411,6 +466,30 @@
       </categories>
       <tags>
         <tag>舞萌DX</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World - The first post!</title>
+    <url>/2024/02/20/hello-world/</url>
+    <content><![CDATA[<p>#Hexo<br>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -454,30 +533,6 @@
       </categories>
       <tags>
         <tag>Swift</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World - The first post!</title>
-    <url>/2024/02/20/hello-world/</url>
-    <content><![CDATA[<p>#Hexo<br>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
