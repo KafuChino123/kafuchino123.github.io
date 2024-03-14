@@ -205,6 +205,40 @@
       </tags>
   </entry>
   <entry>
+    <title>关于学习二进制时碰到的一些小细节</title>
+    <url>/2024/03/06/EEE104-L2-Binary/</url>
+    <content><![CDATA[<p>#EEE104</p>
+<p>在学习二进制时（没想到学二进制竟然是在EEE的课上，有点难绷），在二进制的原码、补码、反码和取反操作上碰到了一些问题。<br>经过和 <a href="https://breezyb1n.github.io/">@b1n</a>、 <a href="http://chiran.top/">@suchen</a> 的讨论，疑团才算一一解开，在这里简单记录总结一下。</p>
+<h3 id="首先，直接划重点："><a href="#首先，直接划重点：" class="headerlink" title="首先，直接划重点："></a>首先，直接划重点：</h3><ul>
+<li>取反是一定0变1，1变0；</li>
+<li>正数的反码不是正数取反得到的；</li>
+<li>负数的反码是正数取反得到的；</li>
+<li>取反+1是得到负数的补码，不是原码；</li>
+<li>要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了。</li>
+</ul>
+<p>接下来，一一解释这五点：</p>
+<h3 id="取反是一定0变1，1变0。"><a href="#取反是一定0变1，1变0。" class="headerlink" title="取反是一定0变1，1变0。"></a>取反是一定0变1，1变0。</h3><p> - 二进制取反，又称二进制反码运算，是指对二进制数的每一位进行取反，即0变为1，1变为0。</p>
+<p>之前疑惑的点是：既然取反一定是0变1，1变0，那么为什么整数的反码和原码是一样的呢？</p>
+<p><img src="/pictures/EEE104-L2-Binary/yfb.jpg" alt="原码补码反码" title="原码补码反码" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>这就要说到第二点了：</p>
+<h3 id="正数的反码不是正数取反得到的："><a href="#正数的反码不是正数取反得到的：" class="headerlink" title="正数的反码不是正数取反得到的："></a>正数的反码不是正数取反得到的：</h3><p> - <strong>正数的原码，反码，补码均相同</strong>，正数的反码就是原码，补码与原码相同。</p>
+<h3 id="负数的反码是正数取反得到的："><a href="#负数的反码是正数取反得到的：" class="headerlink" title="负数的反码是正数取反得到的："></a>负数的反码是正数取反得到的：</h3><p> - 负数的反码等于负数的原码符号位不变，数值位取反的二进制数，正数取反是对正数的二进制数原码的每一位进行取反，得到的就是对应负数的反码。</p>
+<h3 id="取反-1是得到负数的补码，不是原码："><a href="#取反-1是得到负数的补码，不是原码：" class="headerlink" title="取反+1是得到负数的补码，不是原码："></a>取反+1是得到负数的补码，不是原码：</h3><p> - 我们一般说为了得到一个负数的二进制数，通常是对应正数的二进制数取反再+1 —— 这里正数的二进制数通常就是正数的原码(不过正数的原补反其实都一样)，而得到的负数的二进制数通常是其补码，而涉及到负数的计算，一般都使用负数的补码。</p>
+<h3 id="要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："><a href="#要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了：" class="headerlink" title="要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："></a>要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了：</h3><p> - 上面的图表已经显示的很明白了，负数的原码其实就是正数的原码直接最高位 0 变 1 即可。但是似乎并没有太大用，因为涉及到负数计算似乎还是用补码。</p>
+<ul>
+<li>综上，原码通常最好理解，能快速对应其十进制的数值 —— 但是如果涉及到计算，尤其是涉及到负数的，我们通常用补码来计算。补码除了理解会困难些，似乎没有什么不好了。</li>
+</ul>
+<hr>
+<p>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
+]]></content>
+      <categories>
+        <category>XJTLU</category>
+      </categories>
+      <tags>
+        <tag>EEE104</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机网络自学笔记-第一章</title>
     <url>/2024/03/02/ComNet-C1/</url>
     <content><![CDATA[<p>#计算机网络</p>
@@ -280,40 +314,6 @@
       </categories>
       <tags>
         <tag>计算机网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于学习二进制时碰到的一些小细节</title>
-    <url>/2024/03/06/EEE104-L2-Binary/</url>
-    <content><![CDATA[<p>#EEE104</p>
-<p>在学习二进制时（没想到学二进制竟然是在EEE的课上，有点难绷），在二进制的原码、补码、反码和取反操作上碰到了一些问题。<br>经过和 <a href="https://breezyb1n.github.io/">@b1n</a>、 <a href="http://chiran.top/">@suchen</a> 的讨论，疑团才算一一解开，在这里简单记录总结一下。</p>
-<h3 id="首先，直接划重点："><a href="#首先，直接划重点：" class="headerlink" title="首先，直接划重点："></a>首先，直接划重点：</h3><ul>
-<li>取反是一定0变1，1变0；</li>
-<li>正数的反码不是正数取反得到的；</li>
-<li>负数的反码是正数取反得到的；</li>
-<li>取反+1是得到负数的补码，不是原码；</li>
-<li>要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了。</li>
-</ul>
-<p>接下来，一一解释这五点：</p>
-<h3 id="取反是一定0变1，1变0。"><a href="#取反是一定0变1，1变0。" class="headerlink" title="取反是一定0变1，1变0。"></a>取反是一定0变1，1变0。</h3><p> - 二进制取反，又称二进制反码运算，是指对二进制数的每一位进行取反，即0变为1，1变为0。</p>
-<p>之前疑惑的点是：既然取反一定是0变1，1变0，那么为什么整数的反码和原码是一样的呢？</p>
-<p><img src="/pictures/EEE104-L2-Binary/yfb.jpg" alt="原码补码反码" title="原码补码反码" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>这就要说到第二点了：</p>
-<h3 id="正数的反码不是正数取反得到的："><a href="#正数的反码不是正数取反得到的：" class="headerlink" title="正数的反码不是正数取反得到的："></a>正数的反码不是正数取反得到的：</h3><p> - <strong>正数的原码，反码，补码均相同</strong>，正数的反码就是原码，补码与原码相同。</p>
-<h3 id="负数的反码是正数取反得到的："><a href="#负数的反码是正数取反得到的：" class="headerlink" title="负数的反码是正数取反得到的："></a>负数的反码是正数取反得到的：</h3><p> - 负数的反码等于负数的原码符号位不变，数值位取反的二进制数，正数取反是对正数的二进制数原码的每一位进行取反，得到的就是对应负数的反码。</p>
-<h3 id="取反-1是得到负数的补码，不是原码："><a href="#取反-1是得到负数的补码，不是原码：" class="headerlink" title="取反+1是得到负数的补码，不是原码："></a>取反+1是得到负数的补码，不是原码：</h3><p> - 我们一般说为了得到一个负数的二进制数，通常是对应正数的二进制数取反再+1 —— 这里正数的二进制数通常就是正数的原码(不过正数的原补反其实都一样)，而得到的负数的二进制数通常是其补码，而涉及到负数的计算，一般都使用负数的补码。</p>
-<h3 id="要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："><a href="#要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了：" class="headerlink" title="要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了："></a>要得到负数的原码直接将其绝对值的二进制原码前加一个符号位1就可以了：</h3><p> - 上面的图表已经显示的很明白了，负数的原码其实就是正数的原码直接最高位 0 变 1 即可。但是似乎并没有太大用，因为涉及到负数计算似乎还是用补码。</p>
-<ul>
-<li>综上，原码通常最好理解，能快速对应其十进制的数值 —— 但是如果涉及到计算，尤其是涉及到负数的，我们通常用补码来计算。补码除了理解会困难些，似乎没有什么不好了。</li>
-</ul>
-<hr>
-<p>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
-]]></content>
-      <categories>
-        <category>XJTLU</category>
-      </categories>
-      <tags>
-        <tag>EEE104</tag>
       </tags>
   </entry>
   <entry>
@@ -456,62 +456,6 @@
       </tags>
   </entry>
   <entry>
-    <title>关于舞萌DX超级救护车的紫谱谱面的见解和鸟加心得</title>
-    <url>/2024/03/13/SUPERAMBULANCE/</url>
-    <content><![CDATA[<p>#舞萌DX</p>
-<p>别急，在写了在写了……</p>
-]]></content>
-      <categories>
-        <category>舞萌DX</category>
-      </categories>
-      <tags>
-        <tag>舞萌DX</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Swift 中 struct 和 class 的区别</title>
-    <url>/2024/03/02/diffBetweenSC/</url>
-    <content><![CDATA[<p>#Swift</p>
-<p>Swift，作为一个面向对象语言，也是有 <code>class</code> 关键字的。<br>但是不同于Java，C# 等语言，它的 <code>class</code> 似乎并不是很常用（？<br>而在SwiftUI中，<code>class</code>的功能似乎被 <code>struct</code> 取代——行使和 <code>class</code> 相似的功能，但是我还是时常不清楚二者的区别。所以在此总结一下😋。<br>——部分解答参考了Google Gemini给出的回答，如有错误，请务必及时指出！欧内盖！</p>
-<p>Swift 中的 <code>struct</code> 和 <code>class</code> 都是用来定义自定义数据类型的，它们之间有许多相似之处，但也有一些关键的区别。</p>
-<p><strong>值类型与引用类型</strong></p>
-<p>最大的区别在于 struct 是值类型，而 class 是引用类型。这意味着：</p>
-<ul>
-<li><strong>值类型</strong>：将一个值类型变量赋值给另一个变量时，会将该值的副本赋值给另一个变量。因此，对其中一个变量的更改不会影响另一个变量。</li>
-<li><strong>引用类型</strong>：将一个引用类型变量赋值给另一个变量时，只会将该变量对对象的引用赋值给另一个变量。因此，对其中一个变量的更改会影响另一个变量。</li>
-</ul>
-<p><strong>示例</strong></p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Point</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> x: <span class="type">Int</span></span><br><span class="line">  <span class="keyword">var</span> y: <span class="type">Int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a <span class="operator">=</span> <span class="type">Point</span>(x: <span class="number">1</span>, y: <span class="number">2</span>)</span><br><span class="line"><span class="keyword">var</span> b <span class="operator">=</span> a</span><br><span class="line"></span><br><span class="line">b.x <span class="operator">=</span> <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(a.x) <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">print</span>(b.x) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
-
-<p>在这个例子中，<code>Point</code> 就是一个值类型。因此，将 <code>a</code> 赋值给 <code>b</code> 时，会将 <code>a</code> 的值复制给 <code>b</code>。在这之后，如果对 <code>b.x</code> 做更改， <code>a.x</code> 的值不会受到影响。</p>
-<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> name: <span class="type">String</span></span><br><span class="line">  <span class="keyword">var</span> age: <span class="type">Int</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">init</span>(<span class="params">name</span>: <span class="type">String</span>, <span class="params">age</span>: <span class="type">Int</span>) &#123;</span><br><span class="line">    <span class="keyword">self</span>.name <span class="operator">=</span> name</span><br><span class="line">    <span class="keyword">self</span>.age <span class="operator">=</span> age</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c <span class="operator">=</span> <span class="type">Person</span>(name: <span class="string">&quot;John&quot;</span>, age: <span class="number">30</span>)</span><br><span class="line"><span class="keyword">var</span> d <span class="operator">=</span> c</span><br><span class="line"></span><br><span class="line">d.age <span class="operator">=</span> <span class="number">31</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(c.age) <span class="comment">// 31</span></span><br><span class="line"><span class="built_in">print</span>(d.age) <span class="comment">// 31</span></span><br></pre></td></tr></table></figure>
-
-<p>在这个例子中，<code>Person</code> 是一个引用类型。因此，将 <code>c</code> 赋值给 <code>d</code> 时，只会将 <code>c</code> 对对象的引用赋值给 <code>d</code>。在这之后，如果对 <code>d.age</code> 的值做出更改，<code>c.age</code> 的值也会受到影响。</p>
-<p><strong>其他区别</strong></p>
-<ul>
-<li><strong>继承</strong>：class 可以继承自另一个 class，而 struct 不能。</li>
-<li><strong>初始化</strong>：struct 有默认的成员初始化器，而 class 没有。</li>
-<li><strong>可变性</strong>：struct 实例默认是不可变的，而 class 实例是可变的。</li>
-<li><strong>类型转换</strong>：class 实例可以进行类型转换，而 struct 实例不能。</li>
-</ul>
-<p><strong>选择使用 struct 还是 class</strong></p>
-<p>一般来说，如果不需要继承或类型转换，并且希望使用值语义，则应使用 struct。如果需要继承或类型转换，或者需要可变实例，则应使用 class。</p>
-<p>以下是一些使用 struct 和 class 的示例：</p>
-<ul>
-<li><strong>使用 struct 表示简单的数据值</strong>，例如点、大小或颜色。</li>
-<li><strong>使用 struct 表示不可变的数据</strong>，例如日期或时间。</li>
-<li><strong>使用 class 表示复杂的数据结构</strong>，例如用户或文档。</li>
-<li><strong>使用 class 表示需要继承的数据结构</strong>，例如视图控制器或网络请求。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Swift</category>
-      </categories>
-      <tags>
-        <tag>Swift</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World - The first post!</title>
     <url>/2024/02/20/hello-world/</url>
     <content><![CDATA[<p>#Hexo<br>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -613,6 +557,49 @@
 </ol>
 <hr>
 <p>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
+]]></content>
+      <categories>
+        <category>Swift</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Swift 中 struct 和 class 的区别</title>
+    <url>/2024/03/02/diffBetweenSC/</url>
+    <content><![CDATA[<p>#Swift</p>
+<p>Swift，作为一个面向对象语言，也是有 <code>class</code> 关键字的。<br>但是不同于Java，C# 等语言，它的 <code>class</code> 似乎并不是很常用（？<br>而在SwiftUI中，<code>class</code>的功能似乎被 <code>struct</code> 取代——行使和 <code>class</code> 相似的功能，但是我还是时常不清楚二者的区别。所以在此总结一下😋。<br>——部分解答参考了Google Gemini给出的回答，如有错误，请务必及时指出！欧内盖！</p>
+<p>Swift 中的 <code>struct</code> 和 <code>class</code> 都是用来定义自定义数据类型的，它们之间有许多相似之处，但也有一些关键的区别。</p>
+<p><strong>值类型与引用类型</strong></p>
+<p>最大的区别在于 struct 是值类型，而 class 是引用类型。这意味着：</p>
+<ul>
+<li><strong>值类型</strong>：将一个值类型变量赋值给另一个变量时，会将该值的副本赋值给另一个变量。因此，对其中一个变量的更改不会影响另一个变量。</li>
+<li><strong>引用类型</strong>：将一个引用类型变量赋值给另一个变量时，只会将该变量对对象的引用赋值给另一个变量。因此，对其中一个变量的更改会影响另一个变量。</li>
+</ul>
+<p><strong>示例</strong></p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Point</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> x: <span class="type">Int</span></span><br><span class="line">  <span class="keyword">var</span> y: <span class="type">Int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a <span class="operator">=</span> <span class="type">Point</span>(x: <span class="number">1</span>, y: <span class="number">2</span>)</span><br><span class="line"><span class="keyword">var</span> b <span class="operator">=</span> a</span><br><span class="line"></span><br><span class="line">b.x <span class="operator">=</span> <span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(a.x) <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">print</span>(b.x) <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>Point</code> 就是一个值类型。因此，将 <code>a</code> 赋值给 <code>b</code> 时，会将 <code>a</code> 的值复制给 <code>b</code>。在这之后，如果对 <code>b.x</code> 做更改， <code>a.x</code> 的值不会受到影响。</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">  <span class="keyword">var</span> name: <span class="type">String</span></span><br><span class="line">  <span class="keyword">var</span> age: <span class="type">Int</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">init</span>(<span class="params">name</span>: <span class="type">String</span>, <span class="params">age</span>: <span class="type">Int</span>) &#123;</span><br><span class="line">    <span class="keyword">self</span>.name <span class="operator">=</span> name</span><br><span class="line">    <span class="keyword">self</span>.age <span class="operator">=</span> age</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c <span class="operator">=</span> <span class="type">Person</span>(name: <span class="string">&quot;John&quot;</span>, age: <span class="number">30</span>)</span><br><span class="line"><span class="keyword">var</span> d <span class="operator">=</span> c</span><br><span class="line"></span><br><span class="line">d.age <span class="operator">=</span> <span class="number">31</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(c.age) <span class="comment">// 31</span></span><br><span class="line"><span class="built_in">print</span>(d.age) <span class="comment">// 31</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>Person</code> 是一个引用类型。因此，将 <code>c</code> 赋值给 <code>d</code> 时，只会将 <code>c</code> 对对象的引用赋值给 <code>d</code>。在这之后，如果对 <code>d.age</code> 的值做出更改，<code>c.age</code> 的值也会受到影响。</p>
+<p><strong>其他区别</strong></p>
+<ul>
+<li><strong>继承</strong>：class 可以继承自另一个 class，而 struct 不能。</li>
+<li><strong>初始化</strong>：struct 有默认的成员初始化器，而 class 没有。</li>
+<li><strong>可变性</strong>：struct 实例默认是不可变的，而 class 实例是可变的。</li>
+<li><strong>类型转换</strong>：class 实例可以进行类型转换，而 struct 实例不能。</li>
+</ul>
+<p><strong>选择使用 struct 还是 class</strong></p>
+<p>一般来说，如果不需要继承或类型转换，并且希望使用值语义，则应使用 struct。如果需要继承或类型转换，或者需要可变实例，则应使用 class。</p>
+<p>以下是一些使用 struct 和 class 的示例：</p>
+<ul>
+<li><strong>使用 struct 表示简单的数据值</strong>，例如点、大小或颜色。</li>
+<li><strong>使用 struct 表示不可变的数据</strong>，例如日期或时间。</li>
+<li><strong>使用 class 表示复杂的数据结构</strong>，例如用户或文档。</li>
+<li><strong>使用 class 表示需要继承的数据结构</strong>，例如视图控制器或网络请求。</li>
+</ul>
 ]]></content>
       <categories>
         <category>Swift</category>
