@@ -7,16 +7,16 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="#EEE104 在学习二进制时（没想到学二进制竟然是在EEE的课上，有点难绷），在二进制的原码、补码、反码和取反操作上碰到了一些问题。经过和 @b1n、 @suchen 的讨论，疑团才算一一解开，在这里简单记录总结一下。 首先，直接划重点： 取反是一定0变1，1变0； 正数的反码不是正数取反得到的； 负数的反码是正数取反得到的； 取反+1是得到负数的补码，不是原码； 要得到负数的原码直接将其绝对值">
+<meta name="description" content="#EEE104 在学习二进制时（没想到学二进制竟然是在EEE的课上，有点难绷），在二进制的原码、补码、反码和取反操作上碰到了一些问题。经过和 @b1n、 @suchen 的讨论，疑团才算一一解开，在这里简单记录总结一下。 还有一点要注意的是，在英语中，1’s complement 表示反码，2’s complement 表示补码。 首先，直接划重点： 取反是一定0变1，1变0； 正数的反码不是正数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于学习二进制时碰到的一些小细节">
 <meta property="og:url" content="https://kafuchino123.github.io/2024/03/06/EEE104-L2-Binary/index.html">
 <meta property="og:site_name" content="Raspberry.的个人博客">
-<meta property="og:description" content="#EEE104 在学习二进制时（没想到学二进制竟然是在EEE的课上，有点难绷），在二进制的原码、补码、反码和取反操作上碰到了一些问题。经过和 @b1n、 @suchen 的讨论，疑团才算一一解开，在这里简单记录总结一下。 首先，直接划重点： 取反是一定0变1，1变0； 正数的反码不是正数取反得到的； 负数的反码是正数取反得到的； 取反+1是得到负数的补码，不是原码； 要得到负数的原码直接将其绝对值">
+<meta property="og:description" content="#EEE104 在学习二进制时（没想到学二进制竟然是在EEE的课上，有点难绷），在二进制的原码、补码、反码和取反操作上碰到了一些问题。经过和 @b1n、 @suchen 的讨论，疑团才算一一解开，在这里简单记录总结一下。 还有一点要注意的是，在英语中，1’s complement 表示反码，2’s complement 表示补码。 首先，直接划重点： 取反是一定0变1，1变0； 正数的反码不是正数">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://kafuchino123.github.io/img/404.jpg">
 <meta property="article:published_time" content="2024-03-06T15:24:19.000Z">
-<meta property="article:modified_time" content="2024-03-12T17:12:51.882Z">
+<meta property="article:modified_time" content="2024-04-02T17:14:43.397Z">
 <meta property="article:author" content="Raspberry">
 <meta property="article:tag" content="EEE104">
 <meta name="twitter:card" content="summary">
@@ -66,7 +66,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"kafuchino123.github.io","author":"Raspberry","root":"/","typed_text":["计算寄大学牲..."],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/pictures/default/log.svg","icon16":"/pictures/default/log.svg","icon32":"/pictures/default/log.svg","appleTouchIcon":"/pictures/default/log.svg","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms","author":"Post author: ","copyright_link":"Post link: ","copyright_license_title":"Copyright Notice: ","copyright_license_content":"All articles in this blog are licensed under undefined unless otherwise stated.","copy_success":"Copied","copy_failure":"Copy failed","open_read_mode":"Enter reading mode","exit_read_mode":"Exit reading mode","notice_outdate_message":"It has been undefined days since the last update, the content of the article may be outdated.","sticky":"TOP","just":"Just","min":"minutes ago","hour":"hours ago","day":"days ago","month":"months ago"},"swup":false,"plugin":{"flickr_justified_gallery":"https://npm.elemecdn.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"toc":{"post_title":true},"live_time":{"start_time":"02/20/2024 15:00:00","prefix":"The blog has been lovely to run undefined day"},"covers":["/pictures/default/random1.jpg","/pictures/default/random2.jpg","/pictures/default/random3.jpg","/pictures/default/random4.jpg","/pictures/default/random5.jpg","/pictures/default/random6.jpg","/pictures/default/random7.jpg"],"search":{"enable":true,"type":"local","href":"https://www.google.com/search?q=site:","domain":null,"trigger":"auto","path":"search.xml"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-13 01:12:51"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-04-03 01:14:43"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -407,6 +407,7 @@
     <article id="article-container" class="trm-publication">
     <p>#EEE104</p>
 <p>在学习二进制时（没想到学二进制竟然是在EEE的课上，有点难绷），在二进制的原码、补码、反码和取反操作上碰到了一些问题。<br>经过和 <a target="_blank" rel="noopener" href="https://breezyb1n.github.io/">@b1n</a>、 <a target="_blank" rel="noopener" href="http://chiran.top/">@suchen</a> 的讨论，疑团才算一一解开，在这里简单记录总结一下。</p>
+<p>还有一点要注意的是，在英语中，1’s complement 表示反码，2’s complement 表示补码。</p>
 <h3 id="首先，直接划重点："><a href="#首先，直接划重点：" class="headerlink" title="首先，直接划重点："></a>首先，直接划重点：</h3><ul>
 <li>取反是一定0变1，1变0；</li>
 <li>正数的反码不是正数取反得到的；</li>
