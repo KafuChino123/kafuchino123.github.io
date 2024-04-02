@@ -287,7 +287,7 @@
     <url>/2024/03/06/EEE104-L2-Binary/</url>
     <content><![CDATA[<p>#EEE104</p>
 <p>在学习二进制时（没想到学二进制竟然是在EEE的课上，有点难绷），在二进制的原码、补码、反码和取反操作上碰到了一些问题。<br>经过和 <a href="https://breezyb1n.github.io/">@b1n</a>、 <a href="http://chiran.top/">@suchen</a> 的讨论，疑团才算一一解开，在这里简单记录总结一下。</p>
-<p>还有一点要注意的是，在英语中，1’s complement 表示反码，2’s complement 表示补码。</p>
+<p>还有一点要注意的是，在英语中，原码是 true form，1’s complement 表示反码，2’s complement 表示补码。</p>
 <h3 id="首先，直接划重点："><a href="#首先，直接划重点：" class="headerlink" title="首先，直接划重点："></a>首先，直接划重点：</h3><ul>
 <li>取反是一定0变1，1变0；</li>
 <li>正数的反码不是正数取反得到的；</li>
