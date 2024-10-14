@@ -759,4 +759,61 @@
         <tag>Swift</tag>
       </tags>
   </entry>
+  <entry>
+    <title>MacOS绑定西浦邮箱保姆级指北</title>
+    <url>/2024/10/15/UseXJTLUMailInMacOS/</url>
+    <content><![CDATA[<p># XJTLU</p>
+<p><strong>前言</strong></p>
+<p>每年学校的IT部门和各大校园公众号都有推送 <em>关于新生（或者还没绑定邮箱的老生）的西浦邮箱绑定</em> 相关的问题。但是，我大致翻了翻很多推文，几乎都是聚焦于Windows、Android和iOS&#x2F;iPadOS客户端，很难找到Mac端的绑定方式。</p>
+<p>（在我刚买新Mac的时候也遇到过不会绑定西浦邮箱的问题，过了好一段时间才绑定上，中间用网页端凑合了很长时间。。。</p>
+<p>其实并不难，也不复杂，但是对于很多不熟悉的人还是会一头雾水，所以在这里介绍一下。</p>
+<p>（其实我找到了一个学长的博客有讲：<a href="https://blog.csdn.net/weixin_30415591/article/details/116883529">博客链接</a>，但是时间比较久了，时效性可能不太强，操作其实几乎一样。这里用macOS  Sonoma再过一遍。</p>
+<p><strong>正文</strong></p>
+<ol>
+<li>打开“系统设置&#x2F;系统偏好设置&#x2F;System Settings”：</li>
+</ol>
+<p>!(pictures&#x2F;UseXJTLUMailInMacOS&#x2F;1.png)</p>
+<ol>
+<li><p>找到“互联网账户”：</p>
+<p>!(pictures&#x2F;UseXJTLUMailInMacOS&#x2F;2.png)</p>
+</li>
+<li><p>点击“添加账户&#x2F;Add account”：</p>
+</li>
+</ol>
+<p>!(ictures&#x2F;UseXJTLUMailInMacOS&#x2F;3.png)</p>
+<ol>
+<li><p>选择“Microsoft Exchange”：</p>
+<p>!(ictures&#x2F;UseXJTLUMailInMacOS&#x2F;4.png)</p>
+</li>
+<li><p>输入个人信息，后点击“登录&#x2F;Sign In”：</p>
+<p>   !(ictures&#x2F;UseXJTLUMailInMacOS&#x2F;5.png)</p>
+</li>
+<li><p>点击“手动配置&#x2F;Configure Manually”：</p>
+<p>   !(ictures&#x2F;UseXJTLUMailInMacOS&#x2F;6.png)</p>
+<p>   这时候如果你直接点 ”登录&#x2F;Sign In“ 也可以，后面都有弹窗要求输入密码，输入密码后点击登录即可。</p>
+<p>   !(ictures&#x2F;UseXJTLUMailInMacOS&#x2F;7.png)</p>
+<p>   但是接着会报错：“Unable to verify account name or password.”：</p>
+<p>   !(ictures&#x2F;UseXJTLUMailInMacOS&#x2F;8.png)</p>
+</li>
+</ol>
+<p>在“Internal URL”和“External URL”处都填入 <u><strong>mail.xjtlu.edu.cn</strong></u>，同时记得把“用户名&#x2F;User Name”改一下：</p>
+<p>!(ictures&#x2F;UseXJTLUMailInMacOS&#x2F;9.png)</p>
+<p>接下来，在点击“登录&#x2F;Sign In”，不出意外会出现下图的结果，就说明登录成功了：</p>
+<p>!(ictures&#x2F;UseXJTLUMailInMacOS&#x2F;10.png)</p>
+<p>其中，最核心最重要的就是邮箱功能了，其他的比如日历、提醒事项、备忘录等，你可以走学校服务器去创建自己的日程等。和你的Apple设备自带的默认的iCloud服务器不一样，但是使用上是一样的（实际用下来感觉学校的日程、提醒事项同步不太好用，比较慢，还是用iCloud吧）总之看情况勾选就好，不知道的话就全选上。</p>
+<p>然后，就大功告成啦！</p>
+<p>!(ictures&#x2F;UseXJTLUMailInMacOS&#x2F;11.png)</p>
+<p>!(ictures&#x2F;UseXJTLUMailInMacOS&#x2F;12.png)</p>
+<p>你还可以把你的邮箱的显示名称修改为XJTLU等等你好认的名字（在Exchange账户的“详细&#x2F;details”里设置）：</p>
+<p>!(ictures&#x2F;UseXJTLUMailInMacOS&#x2F;13.png)</p>
+<p>感谢阅读！</p>
+<p>如有什么疑问，欢迎通过邮箱联系：<a href="mailto:&#x53;&#104;&#117;&#111;&#46;&#x4d;&#97;&#50;&#x32;&#64;&#x73;&#x74;&#x75;&#100;&#101;&#x6e;&#116;&#x2e;&#x78;&#x6a;&#x74;&#108;&#x75;&#46;&#x65;&#x64;&#x75;&#46;&#99;&#x6e;">&#x53;&#104;&#117;&#111;&#46;&#x4d;&#97;&#50;&#x32;&#64;&#x73;&#x74;&#x75;&#100;&#101;&#x6e;&#116;&#x2e;&#x78;&#x6a;&#x74;&#108;&#x75;&#46;&#x65;&#x64;&#x75;&#46;&#99;&#x6e;</a>。</p>
+]]></content>
+      <categories>
+        <category>XJTLU</category>
+      </categories>
+      <tags>
+        <tag>Swift</tag>
+      </tags>
+  </entry>
 </search>
