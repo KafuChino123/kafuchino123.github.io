@@ -411,7 +411,17 @@
 <li>分组丢失：①链路的队列缓冲区容量有限；②当分组到达一个满的队列时，该分组将会丢失；③丢失的分组可能会被前一个节点或源端系统重传，或根本不重传。</li>
 <li>吞吐量：在源端和目标端之间传输的速率（数据量&#x2F;单位时间）。</li>
 </ul>
-<h3 id="协议层次和服务模型"><a href="#协议层次和服务模型" class="headerlink" title="协议层次和服务模型"></a>协议层次和服务模型</h3><hr>
+<h3 id="协议层次和服务模型"><a href="#协议层次和服务模型" class="headerlink" title="协议层次和服务模型"></a>协议层次和服务模型</h3><ul>
+<li>层次化方式实现复杂网络功能：</li>
+<li>将网络复杂的功能分层功能明确的层次，每一层实现了其中一个或一组功能，功能中有其上层可以使用的功能：服务</li>
+<li>本层协议实体相互交互执行本层的协议动作，目的是实现本层功能，通过接口为上层提供更好的服务</li>
+<li>在实现本层协议的时候，直接利用了下层所提供的服务</li>
+<li>本层的服务：借助下层服务实现的本层协议实体之间交互带来的新功能（上层可以利用的）+更下层所提供的服务</li>
+</ul>
+<h4 id="服务和访问点"><a href="#服务和访问点" class="headerlink" title="服务和访问点"></a>服务和访问点</h4><p><img src="/pictures/ComNet-C1/%E6%9C%8D%E5%8A%A1%E5%92%8C%E8%AE%BF%E9%97%AE%E7%82%B9.png" alt="服务和访问点" title="服务和访问点" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h4 id="服务的类型"><a href="#服务的类型" class="headerlink" title="服务的类型"></a>服务的类型</h4><p><img src="/pictures/ComNet-C1/%E9%9D%A2%E5%90%91%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%9C%8D%E5%8A%A1.png" alt="面向连接的服务" title="面向连接的服务" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br><img src="/pictures/ComNet-C1/%E6%97%A0%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%9C%8D%E5%8A%A1.png" alt="无连接的服务" title="无连接的服务" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h4 id="服务和协议"><a href="#服务和协议" class="headerlink" title="服务和协议"></a>服务和协议</h4><p><img src="/pictures/ComNet-C1/%E6%9C%8D%E5%8A%A1%E5%92%8C%E5%8D%8F%E8%AE%AE.png" alt="服务和协议" title="服务和协议" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<hr>
 <p>持续更新中…<br>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
 ]]></content>
       <categories>
