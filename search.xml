@@ -394,6 +394,22 @@
 <li>传输媒体分为导引型媒体和非导引型媒体。导引型就是看得见摸得着的实体（光纤、电缆等），非导引型就是看不见的（电磁波等）</li>
 </ul>
 <p><img src="/pictures/ComNet-C1/%E4%BC%A0%E8%BE%93%E5%AA%92%E4%BD%93.png" alt="传输媒体" title="传输媒体" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br><img src="/pictures/ComNet-C1/%E4%BC%A0%E8%BE%93%E5%AA%92%E4%BD%932.png" alt="传输媒体" title="传输媒体" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br><img src="/pictures/ComNet-C1/%E4%BC%A0%E8%BE%93%E5%AA%92%E4%BD%933.png" alt="传输媒体" title="传输媒体" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="Internet结构和ISP"><a href="#Internet结构和ISP" class="headerlink" title="Internet结构和ISP"></a>Internet结构和ISP</h3><ul>
+<li>互联网络结构：网络的网络</li>
+<li>端系统通过ISP（Internet Service Provider，网络服务提供商）接入互联网，ISP之间通过IXP（Internet Exchange Point，互联网交换点）连接。</li>
+<li>ICP：Internet Content Provider，互联网内容提供商，如百度、谷歌等。</li>
+</ul>
+<h4 id="ISP之间的连接"><a href="#ISP之间的连接" class="headerlink" title="ISP之间的连接"></a>ISP之间的连接</h4><ul>
+<li>POP：Point of Presence，高层ISP面向客户网络的接入点，涉及费用结算。</li>
+<li>IXP：Internet Exchange Point，多个对等ISP之间的连接点，不涉及费用结算。</li>
+<li>对等接入：两个ISP之间的连接，不涉及费用结算。</li>
+<li>ICP自己部署专属网络，同时和各级ISP连接。</li>
+</ul>
+<h3 id="分组延时，丢失和吞吐量"><a href="#分组延时，丢失和吞吐量" class="headerlink" title="分组延时，丢失和吞吐量"></a>分组延时，丢失和吞吐量</h3><h4 id="分组延时"><a href="#分组延时" class="headerlink" title="分组延时"></a>分组延时</h4><ul>
+<li>分组延时：节点处理延时，排队延时，传输延时，传播延时。</li>
+<li>ICMP：Internet Control Message Protocol，网络控制数据报协议，用于网络故障诊断和报告。</li>
+<li>分组丢失：①链路的队列缓冲区容量有限；②当分组到达一个满的队列时，该分组将会丢失；③丢失的分组可能会被前一个节点或源端系统重传，或根本不重传。</li>
+</ul>
 <hr>
 <p>持续更新中…<br>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
 ]]></content>
