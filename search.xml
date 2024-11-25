@@ -259,71 +259,8 @@
     <title>计算机网络自学笔记-第一章</title>
     <url>/2024/10/25/ComNet-C1/</url>
     <content><![CDATA[<p>#计算机网络 #XJTLU</p>
-<h1 id="湖科大-深入浅出计算机网络-微课课程"><a href="#湖科大-深入浅出计算机网络-微课课程" class="headerlink" title="湖科大 深入浅出计算机网络 微课课程"></a>湖科大 深入浅出计算机网络 微课课程</h1><p>计算机网络系列笔记根据B站课程 <a href="https://space.bilibili.com/360996402">@湖科大教书匠</a> 的课程总结而来，供自学以及分享使用。<br><a href="https://www.bilibili.com/video/BV1NT411g7n6?p=3&vd_source=bda40cfe75d1533c45205d7bec39503b">&lt;课程链接&gt;</a></p>
-<h2 id="因特网概述"><a href="#因特网概述" class="headerlink" title="因特网概述"></a>因特网概述</h2><h3 id="网络、互联网和因特网"><a href="#网络、互联网和因特网" class="headerlink" title="网络、互联网和因特网"></a>网络、互联网和因特网</h3><p>• 网络（Network）由若干结点（Node）和连接这些结点的链路（Link）组成。</p>
-<p>• 多个网络还可以通过路由器互连起来，这样就构成了一个覆盖范围更大的网络，即互联网。<br>————因此，互联网也称为“网络的网络(Network of Networks)”。</p>
-<p>• 因特网（Internet）是世界上最大的互连网络（用户数以亿计，互连的网络数以百万计）。<br>————连接在因特网上的计算机称为主机（host）<br><img src="/pictures/ComNet-C1/%E7%BD%91%E7%BB%9C.png" alt="网络" title="网络" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br><img src="/pictures/ComNet-C1/ivsI.png" alt="ivsI" title="ivsI" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h3 id="因特网简介"><a href="#因特网简介" class="headerlink" title="因特网简介"></a>因特网简介</h3><p>• 因特网发展的三个阶段：<br><img src="/pictures/ComNet-C1/%E4%B8%89%E4%B8%AA%E9%98%B6%E6%AE%B5.png" alt="三个阶段" title="三个阶段" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>• 因特网服务提供者：ISP（Internet Service Provider）<br>————我国的ISP就是三大运营商：移动联通电信（广电：？<br>————给他们缴纳一定费用，他们给主机一个IP地址，从而让主机能够在因特网中通信</p>
-<p>• ISP的三层结构：<br><img src="/pictures/ComNet-C1/ISP%E4%B8%89%E5%B1%82%E7%BB%93%E6%9E%84.png" alt="ISP三层结构" title="ISP三层结构" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>————顺带一提，一旦某个用户能够接入到因特网，那么他也可以成为一个ISP。（购买调制解调器或路由器等设备，让其他用户和他相连。）</p>
-<p>• 因特网的标准化工作：<br><img src="/pictures/ComNet-C1/%E6%A0%87%E5%87%86%E5%8C%96.png" alt="标准化" title="标准化" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>• 因特网的管理机构：<br><img src="/pictures/ComNet-C1/%E7%AE%A1%E7%90%86.png" alt="管理" title="管理" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>• 因特网的组成：<br><img src="/pictures/ComNet-C1/%E7%BB%84%E6%88%90.png" alt="组成" title="组成" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h2 id="电路交换、分组交换和报文交换"><a href="#电路交换、分组交换和报文交换" class="headerlink" title="电路交换、分组交换和报文交换"></a>电路交换、分组交换和报文交换</h2><h3 id="电路交换"><a href="#电路交换" class="headerlink" title="电路交换"></a>电路交换</h3><p>电路交换分为三个步骤：</p>
-<ul>
-<li><strong>建立连接</strong>：分配通信资源</li>
-<li><strong>通话</strong>：一直占用通信资源</li>
-<li><strong>释放连接</strong>：归还通信资源</li>
-</ul>
-<p>例子：旧时的电话通信：<br><img src="/pictures/ComNet-C1/%E7%94%B5%E8%AF%9D%E9%80%9A%E4%BF%A1.png" alt="电话通信" title="电话通信" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<ul>
-<li><strong>计算机之间的数据传送是突发式</strong>的，当<strong>使用电路交换</strong>来传送计算机数据时，其<strong>线路的传输效率一般都会很低</strong>，线路上真正用来传送数据的时间往往不到10%甚至1%。因此，计算机网络通常采用<strong>分组交换</strong>。</li>
-</ul>
-<h3 id="分组交换"><a href="#分组交换" class="headerlink" title="分组交换"></a>分组交换</h3><ul>
-<li><p>通常，我们把表示消息的整块数据称为一个<strong>报文</strong><br>————而较长的报文不适宜直接传输（对交换节点的缓存容量有很大的需求，在错误处理方面也会比较低效），所以会划分成若干个较小的等长数据段，同时为其添加<strong>首部</strong>：<br><img src="/pictures/ComNet-C1/%E9%A6%96%E9%83%A8.png" alt="首部" title="首部" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-</li>
-<li><p>首部的作用：最重要的是包含了<strong>分组的目的地址</strong>。</p>
-</li>
-<li><p>分组可以途径不同的路径最后到达目的地址。</p>
-</li>
-</ul>
-<p><img src="/pictures/ComNet-C1/%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2.png" alt="分组交换" title="分组交换" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><strong>分组交换的优点</strong>：</p>
-<ul>
-<li>没有建立连接和释放连接的过程；</li>
-<li>分组传输过程中逐段占用通信链路，有较高的通信线路利用率；</li>
-<li>交换节点可以为每一个分组独立选择转发路由，使得网络有很好的生存性。</li>
-</ul>
-<p><strong>分组交换的缺点</strong>：</p>
-<ul>
-<li>分组首部带来了额外的传输开销；</li>
-<li>交换节点存储转发分组会造成一定的时延；</li>
-<li>无法确保通信时端到端通信资源全部可用，在通信量较大时可能造成网络拥塞。</li>
-</ul>
-<h3 id="报文交换"><a href="#报文交换" class="headerlink" title="报文交换"></a>报文交换</h3><ul>
-<li>报文交换是分组交换的前身。</li>
-<li>在报文交换中，<strong>报文被整个地发送</strong>，而不是拆开成若干个分组进行发送。</li>
-<li>交换节点将报文<strong>整体接收完成后</strong>才能查找转发表，将整个报文转发到下一个节点。</li>
-<li>因此，报文交换比分组交换带来的转发时延要长很多，需要交换节点具有的缓存空间也大很多。</li>
-</ul>
-<h3 id="三种交换方式的对比"><a href="#三种交换方式的对比" class="headerlink" title="三种交换方式的对比"></a>三种交换方式的对比</h3><p><img src="/pictures/ComNet-C1/%E5%AF%B9%E6%AF%94.png" alt="对比" title="对比" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<ul>
-<li><p>若要传送大量的数据，并且数据传送时间远大于建立连接的时间，则使用电路交换可以有较高的传输效率。然而<strong>计算机的数据传送</strong>往往是<strong>突发式</strong>的，<strong>采用电路交换</strong>时通信<strong>线路的利用率会很低</strong>。</p>
-</li>
-<li><p>报文交换和分组交换都<strong>不需要建立连接</strong>（即预先分配通信资源），在<strong>传送计算机的突发数据</strong>时可以<strong>提高通信线路的利用率</strong>。</p>
-</li>
-<li><p>将报文构造成若干个更小的分组进行<strong>分组交换</strong>，比将整个报文进行报文交换的<strong>时延要小</strong>，并且还可以<strong>避免太长的报文长时间占用链路</strong>，<strong>有利于差错控制</strong>，同时具有更好的灵活性。</p>
-</li>
-</ul>
-<h2 id="计算机网络的定义"><a href="#计算机网络的定义" class="headerlink" title="计算机网络的定义"></a>计算机网络的定义</h2><ul>
-<li>计算机网络早期的简单定义：是<strong>互联的</strong>，<strong>自治的计算机集合</strong>。</li>
-</ul>
-<p><img src="/pictures/ComNet-C1/%E4%BA%92%E8%BF%9E.png" alt="互连" title="互连" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<ul>
-<li>现阶段一个较好的定义：计算机网络主要是由一些通用的，可编程的硬件互连而成的，而这些硬件并非专门用来实现某一特定目的（例如，传送数据或视频信号）。</li>
-</ul>
-<h1 id="中科大郑烇、杨坚《计算机网络（自顶向下方法-第7版，James-F-Kurose，Keith-W-Ross）》课程"><a href="#中科大郑烇、杨坚《计算机网络（自顶向下方法-第7版，James-F-Kurose，Keith-W-Ross）》课程" class="headerlink" title="中科大郑烇、杨坚《计算机网络（自顶向下方法 第7版，James F.Kurose，Keith W.Ross）》课程"></a>中科大郑烇、杨坚《计算机网络（自顶向下方法 第7版，James F.Kurose，Keith W.Ross）》课程</h1><p>计算机网络系列笔记根据B站课程 <a href="https://space.bilibili.com/410739029">@中科大-郑烇老师</a> 的课程总结而来，供自学以及分享使用。<br><a href="https://www.bilibili.com/video/BV1JV411t7ow?spm_id_from=333.788.videopod.episodes&vd_source=bda40cfe75d1533c45205d7bec39503b">&lt;课程链接&gt;</a></p>
+<p>中科大郑烇、杨坚《计算机网络（自顶向下方法 第7版，James F.Kurose，Keith W.Ross）》课程</p>
+<p>计算机网络系列笔记根据B站课程 <a href="https://space.bilibili.com/410739029">@中科大-郑烇老师</a> 的课程总结而来，供自学以及分享使用。<br><a href="https://www.bilibili.com/video/BV1JV411t7ow?spm_id_from=333.788.videopod.episodes&vd_source=bda40cfe75d1533c45205d7bec39503b">&lt;课程链接&gt;</a></p>
 <h2 id="第一章-计算机网络概述"><a href="#第一章-计算机网络概述" class="headerlink" title="第一章 计算机网络概述"></a>第一章 计算机网络概述</h2><h3 id="什么是网络？"><a href="#什么是网络？" class="headerlink" title="什么是网络？"></a>什么是网络？</h3><ul>
 <li>把端系统和交换节点连接在一起叫接入网，交换节点和交互节点叫网络核心。</li>
 <li>端系统 &#x3D; 主机，主要包括能进行网络通信的网络应用和操作系统。</li>
@@ -423,6 +360,14 @@
 <h4 id="服务和协议"><a href="#服务和协议" class="headerlink" title="服务和协议"></a>服务和协议</h4><p><img src="/pictures/ComNet-C1/%E6%9C%8D%E5%8A%A1%E5%92%8C%E5%8D%8F%E8%AE%AE.png" alt="服务和协议" title="服务和协议" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <h4 id="数据单元-DU"><a href="#数据单元-DU" class="headerlink" title="数据单元(DU)"></a>数据单元(DU)</h4><p><img src="/pictures/ComNet-C1/DU.png" alt="DU" title="DU" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <p><img src="/pictures/ComNet-C1/%E6%9C%8D%E5%8A%A1%E4%B8%8E%E5%8D%8F%E8%AE%AE.png" alt="服务与协议" title="服务与协议" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h4 id="Internet协议栈"><a href="#Internet协议栈" class="headerlink" title="Internet协议栈"></a>Internet协议栈</h4><ul>
+<li>五层模型：应用层，运输层，网络层，链路层，物理层</li>
+</ul>
+<p><img src="/pictures/ComNet-C1/%E4%BA%94%E5%B1%82%E6%A8%A1%E5%9E%8B.png" alt="五层模型" title="五层模型" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<ul>
+<li>ISO&#x2F;OSI七层模型：应用层，表示层，会话层，传输层，网络层，链路层，物理层</li>
+</ul>
+<p><img src="/pictures/ComNet-C1/%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B.png" alt="七层模型" title="七层模型" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <hr>
 <p>持续更新中…<br>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
 ]]></content>
@@ -915,6 +860,86 @@
       </categories>
       <tags>
         <tag>Swift</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机网络自学笔记(Legacy)</title>
+    <url>/2024/04/20/ComNet-C1-HKD/</url>
+    <content><![CDATA[<p>#计算机网络 #XJTLU</p>
+<p>湖科大 深入浅出计算机网络 微课课程(已烂尾，请参考<a href="https://r7y.moe/2024/10/25/ComNet-C1/">&lt;中科大课程的笔记版本&gt;</a>)</p>
+<p>本篇笔记根据B站课程 <a href="https://space.bilibili.com/360996402">@湖科大教书匠</a> 的课程总结而来，供自学以及分享使用。<br><a href="https://www.bilibili.com/video/BV1NT411g7n6?p=3&vd_source=bda40cfe75d1533c45205d7bec39503b">&lt;课程链接&gt;</a></p>
+<h2 id="因特网概述"><a href="#因特网概述" class="headerlink" title="因特网概述"></a>因特网概述</h2><h3 id="网络、互联网和因特网"><a href="#网络、互联网和因特网" class="headerlink" title="网络、互联网和因特网"></a>网络、互联网和因特网</h3><p>• 网络（Network）由若干结点（Node）和连接这些结点的链路（Link）组成。</p>
+<p>• 多个网络还可以通过路由器互连起来，这样就构成了一个覆盖范围更大的网络，即互联网。<br>————因此，互联网也称为“网络的网络(Network of Networks)”。</p>
+<p>• 因特网（Internet）是世界上最大的互连网络（用户数以亿计，互连的网络数以百万计）。<br>————连接在因特网上的计算机称为主机（host）<br><img src="/pictures/ComNet-C1/%E7%BD%91%E7%BB%9C.png" alt="网络" title="网络" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br><img src="/pictures/ComNet-C1/ivsI.png" alt="ivsI" title="ivsI" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="因特网简介"><a href="#因特网简介" class="headerlink" title="因特网简介"></a>因特网简介</h3><p>• 因特网发展的三个阶段：<br><img src="/pictures/ComNet-C1/%E4%B8%89%E4%B8%AA%E9%98%B6%E6%AE%B5.png" alt="三个阶段" title="三个阶段" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>• 因特网服务提供者：ISP（Internet Service Provider）<br>————我国的ISP就是三大运营商：移动联通电信（广电：？<br>————给他们缴纳一定费用，他们给主机一个IP地址，从而让主机能够在因特网中通信</p>
+<p>• ISP的三层结构：<br><img src="/pictures/ComNet-C1/ISP%E4%B8%89%E5%B1%82%E7%BB%93%E6%9E%84.png" alt="ISP三层结构" title="ISP三层结构" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>————顺带一提，一旦某个用户能够接入到因特网，那么他也可以成为一个ISP。（购买调制解调器或路由器等设备，让其他用户和他相连。）</p>
+<p>• 因特网的标准化工作：<br><img src="/pictures/ComNet-C1/%E6%A0%87%E5%87%86%E5%8C%96.png" alt="标准化" title="标准化" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>• 因特网的管理机构：<br><img src="/pictures/ComNet-C1/%E7%AE%A1%E7%90%86.png" alt="管理" title="管理" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>• 因特网的组成：<br><img src="/pictures/ComNet-C1/%E7%BB%84%E6%88%90.png" alt="组成" title="组成" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="电路交换、分组交换和报文交换"><a href="#电路交换、分组交换和报文交换" class="headerlink" title="电路交换、分组交换和报文交换"></a>电路交换、分组交换和报文交换</h2><h3 id="电路交换"><a href="#电路交换" class="headerlink" title="电路交换"></a>电路交换</h3><p>电路交换分为三个步骤：</p>
+<ul>
+<li><strong>建立连接</strong>：分配通信资源</li>
+<li><strong>通话</strong>：一直占用通信资源</li>
+<li><strong>释放连接</strong>：归还通信资源</li>
+</ul>
+<p>例子：旧时的电话通信：<br><img src="/pictures/ComNet-C1/%E7%94%B5%E8%AF%9D%E9%80%9A%E4%BF%A1.png" alt="电话通信" title="电话通信" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<ul>
+<li><strong>计算机之间的数据传送是突发式</strong>的，当<strong>使用电路交换</strong>来传送计算机数据时，其<strong>线路的传输效率一般都会很低</strong>，线路上真正用来传送数据的时间往往不到10%甚至1%。因此，计算机网络通常采用<strong>分组交换</strong>。</li>
+</ul>
+<h3 id="分组交换"><a href="#分组交换" class="headerlink" title="分组交换"></a>分组交换</h3><ul>
+<li><p>通常，我们把表示消息的整块数据称为一个<strong>报文</strong><br>————而较长的报文不适宜直接传输（对交换节点的缓存容量有很大的需求，在错误处理方面也会比较低效），所以会划分成若干个较小的等长数据段，同时为其添加<strong>首部</strong>：<br><img src="/pictures/ComNet-C1/%E9%A6%96%E9%83%A8.png" alt="首部" title="首部" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+</li>
+<li><p>首部的作用：最重要的是包含了<strong>分组的目的地址</strong>。</p>
+</li>
+<li><p>分组可以途径不同的路径最后到达目的地址。</p>
+</li>
+</ul>
+<p><img src="/pictures/ComNet-C1/%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2.png" alt="分组交换" title="分组交换" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><strong>分组交换的优点</strong>：</p>
+<ul>
+<li>没有建立连接和释放连接的过程；</li>
+<li>分组传输过程中逐段占用通信链路，有较高的通信线路利用率；</li>
+<li>交换节点可以为每一个分组独立选择转发路由，使得网络有很好的生存性。</li>
+</ul>
+<p><strong>分组交换的缺点</strong>：</p>
+<ul>
+<li>分组首部带来了额外的传输开销；</li>
+<li>交换节点存储转发分组会造成一定的时延；</li>
+<li>无法确保通信时端到端通信资源全部可用，在通信量较大时可能造成网络拥塞。</li>
+</ul>
+<h3 id="报文交换"><a href="#报文交换" class="headerlink" title="报文交换"></a>报文交换</h3><ul>
+<li>报文交换是分组交换的前身。</li>
+<li>在报文交换中，<strong>报文被整个地发送</strong>，而不是拆开成若干个分组进行发送。</li>
+<li>交换节点将报文<strong>整体接收完成后</strong>才能查找转发表，将整个报文转发到下一个节点。</li>
+<li>因此，报文交换比分组交换带来的转发时延要长很多，需要交换节点具有的缓存空间也大很多。</li>
+</ul>
+<h3 id="三种交换方式的对比"><a href="#三种交换方式的对比" class="headerlink" title="三种交换方式的对比"></a>三种交换方式的对比</h3><p><img src="/pictures/ComNet-C1/%E5%AF%B9%E6%AF%94.png" alt="对比" title="对比" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<ul>
+<li><p>若要传送大量的数据，并且数据传送时间远大于建立连接的时间，则使用电路交换可以有较高的传输效率。然而<strong>计算机的数据传送</strong>往往是<strong>突发式</strong>的，<strong>采用电路交换</strong>时通信<strong>线路的利用率会很低</strong>。</p>
+</li>
+<li><p>报文交换和分组交换都<strong>不需要建立连接</strong>（即预先分配通信资源），在<strong>传送计算机的突发数据</strong>时可以<strong>提高通信线路的利用率</strong>。</p>
+</li>
+<li><p>将报文构造成若干个更小的分组进行<strong>分组交换</strong>，比将整个报文进行报文交换的<strong>时延要小</strong>，并且还可以<strong>避免太长的报文长时间占用链路</strong>，<strong>有利于差错控制</strong>，同时具有更好的灵活性。</p>
+</li>
+</ul>
+<h2 id="计算机网络的定义"><a href="#计算机网络的定义" class="headerlink" title="计算机网络的定义"></a>计算机网络的定义</h2><ul>
+<li>计算机网络早期的简单定义：是<strong>互联的</strong>，<strong>自治的计算机集合</strong>。</li>
+</ul>
+<p><img src="/pictures/ComNet-C1/%E4%BA%92%E8%BF%9E.png" alt="互连" title="互连" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<ul>
+<li>现阶段一个较好的定义：计算机网络主要是由一些通用的，可编程的硬件互连而成的，而这些硬件并非专门用来实现某一特定目的（例如，传送数据或视频信号）。</li>
+</ul>
+<hr>
+<p>持续更新中…<br>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+        <tag>XJTLU</tag>
       </tags>
   </entry>
 </search>
