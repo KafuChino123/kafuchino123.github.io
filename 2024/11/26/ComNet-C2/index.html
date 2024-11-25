@@ -7,16 +7,22 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Raspberry.的个人博客">
-<meta property="og:url" content="https://r7y.moe/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.html">
+<meta name="description" content="#计算机网络 #XJTLU 中科大郑烇、杨坚《计算机网络（自顶向下方法 第7版，James F.Kurose，Keith W.Ross）》课程 计算机网络系列笔记根据B站课程 @中科大-郑烇老师 的课程总结而来，供自学以及分享使用。&lt;课程链接&gt; 应用层 持续更新中…如有错误，请及时指出～评论发邮件均可，欧内盖！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计网Chapter2-应用层">
+<meta property="og:url" content="https://r7y.moe/2024/11/26/ComNet-C2/index.html">
 <meta property="og:site_name" content="Raspberry.的个人博客">
+<meta property="og:description" content="#计算机网络 #XJTLU 中科大郑烇、杨坚《计算机网络（自顶向下方法 第7版，James F.Kurose，Keith W.Ross）》课程 计算机网络系列笔记根据B站课程 @中科大-郑烇老师 的课程总结而来，供自学以及分享使用。&lt;课程链接&gt; 应用层 持续更新中…如有错误，请及时指出～评论发邮件均可，欧内盖！">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-11-25T17:04:00.000Z">
+<meta property="article:modified_time" content="2024-11-25T17:04:46.141Z">
 <meta property="article:author" content="Raspberry">
+<meta property="article:tag" content="计算机网络">
+<meta property="article:tag" content="XJTLU">
 <meta name="twitter:card" content="summary">
 
 
-<title >Raspberry.的个人博客</title>
+<title >计网Chapter2-应用层</title>
 
 <!-- Favicon -->
 
@@ -59,7 +65,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"r7y.moe","author":"Raspberry","root":"/","typed_text":["寄蒜鸡大学牲..."],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/pictures/default/log.svg","icon16":"/pictures/default/log.svg","icon32":"/pictures/default/log.svg","appleTouchIcon":"/pictures/default/log.svg","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms","author":"Post author: ","copyright_link":"Post link: ","copyright_license_title":"Copyright Notice: ","copyright_license_content":"All articles in this blog are licensed under undefined unless otherwise stated.","copy_success":"Copied","copy_failure":"Copy failed","open_read_mode":"Enter reading mode","exit_read_mode":"Exit reading mode","notice_outdate_message":"It has been undefined days since the last update, the content of the article may be outdated.","sticky":"TOP","just":"Just","min":"minutes ago","hour":"hours ago","day":"days ago","month":"months ago"},"swup":false,"plugin":{"flickr_justified_gallery":"https://npm.elemecdn.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"toc":{"post_title":true},"live_time":{"start_time":"02/20/2024 15:00:00","prefix":"The blog has been lovely to run undefined day"},"covers":["/pictures/default/random1.jpg","/pictures/default/random2.jpg","/pictures/default/random3.jpg","/pictures/default/random4.jpg","/pictures/default/random5.jpg","/pictures/default/random6.jpg","/pictures/default/random7.jpg"],"search":{"enable":true,"type":"local","href":"https://www.google.com/search?q=site:","domain":null,"trigger":"auto","path":"search.xml"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":false,"isHome":false,"postUpdate":"2024-11-26 01:04:49"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-11-26 01:04:46"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -224,7 +230,7 @@
     <div class="trm-banner">
     
     <!-- banner cover -->
-    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="/pictures/default/enchantedloveklee.jpg">
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="/pictures/default/Network.png">
     <!-- banner cover end -->
     
 
@@ -240,10 +246,10 @@
                     <!-- banner title -->
                     <div class="trm-banner-text ">
                         <div class="trm-label trm-mb-20">
-                            The article archive
+                            NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            请不要大力拍打，<br>或滑动哟！
+                            计网Chapter2-应用层
                         </h1>
 
                         
@@ -253,7 +259,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        categories
+                                        2024
                                     </span>
                                 </li>
                             </ul>
@@ -376,131 +382,89 @@
             
             <div class="trm-page-content col-lg-8">
                 <div id="trm-content" class="trm-content">
-                    <div class="row">
-    <div class="col-lg-12">
-        <div class="trm-card">
-            <div style="padding: 0 20px;">
-                
-                    <ul class="row trm-list"><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">（1）</span></li><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/Swift/">Swift</a><span class="category-list-count">（3）</span></li><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/XJTLU/">XJTLU</a><span class="category-list-count">（8）</span></li><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a><span class="category-list-count">（3）</span></li></ul>
-                
-            </div>
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            11/26
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            01:04
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            Raspberry
         </div>
     </div>
 </div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <p>#计算机网络 #XJTLU</p>
+<p>中科大郑烇、杨坚《计算机网络（自顶向下方法 第7版，James F.Kurose，Keith W.Ross）》课程</p>
+<p>计算机网络系列笔记根据B站课程 <a target="_blank" rel="noopener" href="https://space.bilibili.com/410739029">@中科大-郑烇老师</a> 的课程总结而来，供自学以及分享使用。<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1JV411t7ow?spm_id_from=333.788.videopod.episodes&vd_source=bda40cfe75d1533c45205d7bec39503b">&lt;课程链接&gt;</a></p>
+<h2 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h2><hr>
+<p>持续更新中…<br>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
 
-<!-- history -->
+</article>
+    
+    
 
-<div class="row">
+</div>
+<div class="trm-post-next-prev row">
     <div class="col-lg-12">
         <!-- title -->
         <h5 class="trm-title-with-divider">
-            
-                计算机网络
-            
-            <span data-number="01"></span>
+            Other Articles
+            <span data-number="02"></span>
         </h5>
     </div>
-    <div class="col-lg-12">
-        <!-- timeline -->
-        <div class="trm-timeline">
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/10/25/ComNet-C1/" class="trm-cover-frame trm-anima-link">
             
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2024/11/26/ComNet-C2/" class="trm-anima-link">
-                                        计网Chapter2-应用层
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">11/26</li>
-                                        <li class="trm-accent-color">01:04</li>
-                                        
-                                        <li>106</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
+            
+                <img alt="cover" class="no-fancybox" src="/pictures/default/Network.png">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+                    计算机网络
+                </a>
             </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2024/10/25/ComNet-C1/" class="trm-anima-link">
-                                        计网Chapter1-计算机网络概述
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">10/25</li>
-                                        <li class="trm-accent-color">00:25</li>
-                                        
-                                        <li>1.6k</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2024/04/20/ComNet-C1-HKD/" class="trm-anima-link">
-                                        计算机网络自学笔记(Legacy)
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">04/20</li>
-                                        <li class="trm-accent-color">09:25</li>
-                                        
-                                        <li>1.3k</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
-            </div>
-            
+            <h5>
+                <a href="/2024/10/25/ComNet-C1/" class="trm-anima-link">
+                    计网Chapter1-计算机网络概述
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/10/25</li>
+                <li>00:25</li>
+                
+                    <li>1.6k</li>
+                
+                
+            </ul>
         </div>
-        <!-- timeline end -->
     </div>
 </div>
+    
+</div>
 
-<!-- history end -->
+    
 
-
-    <div class="trm-pagination">
-        <span class="page-number current">1</span>
-    </div>
-
-
+    <div class="trm-card trm-scroll-animation comment-container">
+    <div id="tcomment"></div>
+</div>
 
 
 
@@ -544,9 +508,29 @@
 
             
 
+    <div id="post-toc" class="trm-post-toc">
+      <div class="trm-post-toc-header">
+        Article table of contents
+				<span id="post-toc-top">
+					TOP
+				</span>
+      </div>
+      <div class="trm-post-toc-content">
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-2" title="应用层"><a rel="nofollow" class="trm-toc-link" href="#应用层"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">应用层</span></a></li></ol>
+      </div>
+    </div>
+
             
 <div class="trm-fixed-container">
     
+        <div class="trm-fixed-btn post-toc-btn" data-title="Open toc">
+            <i class="iconfont fas fa-th-list"></i>
+        </div>
+    
+    
+        <div class="trm-fixed-btn" data-title="Read Mode" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
     
     
     <div id="trm-back-top" class="trm-fixed-btn" data-title="Back To Top">
@@ -623,6 +607,26 @@
     
 
     <!-- 评论插件 -->
+    
+        
+
+        
+
+            
+<script src="https://npm.elemecdn.com/twikoo@1.6.7/dist/twikoo.all.min.js" data-swup-reload-script data-reset="true"></script>
+
+            <script data-swup-reload-script>
+                twikoo.init({
+                    ...{"enable":true,"envId":"https://rasp6erry-twikoo.hf.space","region":null,"option":null},
+                    el:'#tcomment'
+                }).then(function () {
+                    let container = document.querySelector('body>.tk-admin-container')
+                    if(container) container.remove()
+                    document.body.append(document.querySelector('.tk-admin-container'))
+                });;
+            </script>
+
+        
     
 
 
