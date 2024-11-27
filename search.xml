@@ -997,7 +997,9 @@
 </ul>
 </li>
 </ul>
-<hr>
+<h3 id="分布式进程通信"><a href="#分布式进程通信" class="headerlink" title="分布式进程通信"></a>分布式进程通信</h3><h4 id="对进程进行编址（Adressing）"><a href="#对进程进行编址（Adressing）" class="headerlink" title="对进程进行编址（Adressing）"></a>对进程进行编址（Adressing）</h4><p>进程为了接收报文，必须有一个标识，即：SAP（Socket Address Port）。SAP由IP地址和端口号组成。使用唯一的32位IP地址表示一个主机，使用16位端口号表示一个进程。本质上，一对主机进程之间的通信由两个端节点构成，<strong>一个端节点就用IP+Port来标识</strong>。</p>
+<p>一些知名端口号：<br>HTTP TCP：80；  Mail TCP：25</p>
+<h4 id="使用Socket-API传输报文"><a href="#使用Socket-API传输报文" class="headerlink" title="使用Socket API传输报文"></a>使用Socket API传输报文</h4><hr>
 <p>持续更新中…<br>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
 ]]></content>
       <categories>
