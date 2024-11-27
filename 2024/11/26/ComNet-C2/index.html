@@ -7,19 +7,23 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="#计算机网络 #XJTLU 中科大郑烇、杨坚《计算机网络（自顶向下方法 第7版，James F.Kurose，Keith W.Ross）》课程 计算机网络系列笔记根据B站课程 @中科大-郑烇老师 的课程总结而来，供自学以及分享使用。&lt;课程链接&gt; 应用层 持续更新中…如有错误，请及时指出～评论发邮件均可，欧内盖！">
+<meta name="description" content="#计算机网络 #XJTLU 中科大郑烇、杨坚《计算机网络（自顶向下方法 第7版，James F.Kurose，Keith W.Ross）》课程 计算机网络系列笔记根据B站课程 @中科大-郑烇老师 的课程总结而来，供自学以及分享使用。&lt;课程链接&gt; 第二章 应用层 应用层协议原理网络应用的体系结构可能的应用架构：  客户-服务器模式（C&#x2F;S，client&#x2F;server）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计网Chapter2-应用层">
 <meta property="og:url" content="https://r7y.moe/2024/11/26/ComNet-C2/index.html">
 <meta property="og:site_name" content="Raspberry.的个人博客">
-<meta property="og:description" content="#计算机网络 #XJTLU 中科大郑烇、杨坚《计算机网络（自顶向下方法 第7版，James F.Kurose，Keith W.Ross）》课程 计算机网络系列笔记根据B站课程 @中科大-郑烇老师 的课程总结而来，供自学以及分享使用。&lt;课程链接&gt; 应用层 持续更新中…如有错误，请及时指出～评论发邮件均可，欧内盖！">
+<meta property="og:description" content="#计算机网络 #XJTLU 中科大郑烇、杨坚《计算机网络（自顶向下方法 第7版，James F.Kurose，Keith W.Ross）》课程 计算机网络系列笔记根据B站课程 @中科大-郑烇老师 的课程总结而来，供自学以及分享使用。&lt;课程链接&gt; 第二章 应用层 应用层协议原理网络应用的体系结构可能的应用架构：  客户-服务器模式（C&#x2F;S，client&#x2F;server）">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://r7y.moe/img/404.jpg">
+<meta property="og:image" content="https://r7y.moe/img/404.jpg">
+<meta property="og:image" content="https://r7y.moe/img/404.jpg">
 <meta property="article:published_time" content="2024-11-25T17:04:00.000Z">
-<meta property="article:modified_time" content="2024-11-25T17:04:46.141Z">
+<meta property="article:modified_time" content="2024-11-27T16:28:02.110Z">
 <meta property="article:author" content="Raspberry">
 <meta property="article:tag" content="计算机网络">
 <meta property="article:tag" content="XJTLU">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://r7y.moe/img/404.jpg">
 
 
 <title >计网Chapter2-应用层</title>
@@ -65,7 +69,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"r7y.moe","author":"Raspberry","root":"/","typed_text":["寄蒜鸡大学牲..."],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/pictures/default/log.svg","icon16":"/pictures/default/log.svg","icon32":"/pictures/default/log.svg","appleTouchIcon":"/pictures/default/log.svg","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"failure.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}.","hits":"${hits} results found","hits_time":"${hits} results found in ${time} ms","author":"Post author: ","copyright_link":"Post link: ","copyright_license_title":"Copyright Notice: ","copyright_license_content":"All articles in this blog are licensed under undefined unless otherwise stated.","copy_success":"Copied","copy_failure":"Copy failed","open_read_mode":"Enter reading mode","exit_read_mode":"Exit reading mode","notice_outdate_message":"It has been undefined days since the last update, the content of the article may be outdated.","sticky":"TOP","just":"Just","min":"minutes ago","hour":"hours ago","day":"days ago","month":"months ago"},"swup":false,"plugin":{"flickr_justified_gallery":"https://npm.elemecdn.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":200},"toc":{"post_title":true},"live_time":{"start_time":"02/20/2024 15:00:00","prefix":"The blog has been lovely to run undefined day"},"covers":["/pictures/default/random1.jpg","/pictures/default/random2.jpg","/pictures/default/random3.jpg","/pictures/default/random4.jpg","/pictures/default/random5.jpg","/pictures/default/random6.jpg","/pictures/default/random7.jpg"],"search":{"enable":true,"type":"local","href":"https://www.google.com/search?q=site:","domain":null,"trigger":"auto","path":"search.xml"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-11-26 01:04:46"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-11-28 00:28:02"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -407,7 +411,40 @@
     <p>#计算机网络 #XJTLU</p>
 <p>中科大郑烇、杨坚《计算机网络（自顶向下方法 第7版，James F.Kurose，Keith W.Ross）》课程</p>
 <p>计算机网络系列笔记根据B站课程 <a target="_blank" rel="noopener" href="https://space.bilibili.com/410739029">@中科大-郑烇老师</a> 的课程总结而来，供自学以及分享使用。<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1JV411t7ow?spm_id_from=333.788.videopod.episodes&vd_source=bda40cfe75d1533c45205d7bec39503b">&lt;课程链接&gt;</a></p>
-<h2 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h2><hr>
+<p>第二章 应用层</p>
+<h2 id="应用层协议原理"><a href="#应用层协议原理" class="headerlink" title="应用层协议原理"></a>应用层协议原理</h2><h3 id="网络应用的体系结构"><a href="#网络应用的体系结构" class="headerlink" title="网络应用的体系结构"></a>网络应用的体系结构</h3><p>可能的应用架构：</p>
+<ul>
+<li>客户-服务器模式（C&#x2F;S，client&#x2F;server）</li>
+<li>对等模式（P2P，peer-to-peer）</li>
+<li>混合模式</li>
+</ul>
+<p><img src="/pictures/ComNet-C2/CS%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png" alt="CS体系结构" title="CS体系结构" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<ul>
+<li>CS模式的缺点：可扩展性较差，服务器可能成为性能瓶颈</li>
+</ul>
+<p><img src="/pictures/ComNet-C2/%E5%AF%B9%E7%AD%89%E4%BD%93%E6%9E%B6%E6%9E%84.png" alt="对等体架构" title="对等体架构" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<ul>
+<li>P2P模式的缺点：难以管理</li>
+</ul>
+<p><img src="/pictures/ComNet-C2/%E6%B7%B7%E5%90%88%E4%BD%93%E6%A8%A1%E5%BC%8F.png" alt="混合体模式" title="混合体模式" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="进程通信"><a href="#进程通信" class="headerlink" title="进程通信"></a>进程通信</h3><ul>
+<li><p>进程：运行在不同主机上的应用程序</p>
+<ul>
+<li>客户端进程：发起通信的进程，是主动的进程</li>
+<li>服务器进程：等待连接的进程，是被动的进程</li>
+<li>即便是P2P模式，也有客户端和服务器之分。</li>
+</ul>
+</li>
+<li><p>在同一个主机内，使用进程间通信机制通信（操作系统）；</p>
+</li>
+<li><p>不同主机，通过交换报文(Message)进行通信。</p>
+<ul>
+<li>使用OS提供的通信服务</li>
+<li>按照应用协议交换报文（借助传输层提供的服务）</li>
+</ul>
+</li>
+</ul>
+<hr>
 <p>持续更新中…<br>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
 
 </article>
@@ -516,7 +553,7 @@
 				</span>
       </div>
       <div class="trm-post-toc-content">
-        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-2" title="应用层"><a rel="nofollow" class="trm-toc-link" href="#应用层"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">应用层</span></a></li></ol>
+        <ol class="trm-toc"><li class="trm-toc-item trm-toc-level-2" title="应用层协议原理"><a rel="nofollow" class="trm-toc-link" href="#应用层协议原理"><span class="trm-toc-number">1.</span> <span class="trm-toc-text">应用层协议原理</span></a><ol class="trm-toc-child"><li class="trm-toc-item trm-toc-level-3" title="网络应用的体系结构"><a rel="nofollow" class="trm-toc-link" href="#网络应用的体系结构"><span class="trm-toc-number">1.1.</span> <span class="trm-toc-text">网络应用的体系结构</span></a></li><li class="trm-toc-item trm-toc-level-3" title="进程通信"><a rel="nofollow" class="trm-toc-link" href="#进程通信"><span class="trm-toc-number">1.2.</span> <span class="trm-toc-text">进程通信</span></a></li></ol></li></ol>
       </div>
     </div>
 
