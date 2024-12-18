@@ -999,13 +999,16 @@
 </ul>
 <h3 id="分布式进程通信"><a href="#分布式进程通信" class="headerlink" title="分布式进程通信"></a>分布式进程通信</h3><h4 id="对进程进行编址（Adressing）"><a href="#对进程进行编址（Adressing）" class="headerlink" title="对进程进行编址（Adressing）"></a>对进程进行编址（Adressing）</h4><p>进程为了接收报文，必须有一个标识，即：SAP（Socket Address Port）。SAP由IP地址和端口号组成。使用唯一的32位IP地址表示一个主机，使用16位端口号表示一个进程。本质上，一对主机进程之间的通信由两个端节点构成，<strong>一个端节点就用IP+Port来标识</strong>。</p>
 <p>一些知名端口号：<br>HTTP TCP：80；  Mail TCP：25</p>
-<h4 id="使用Socket-API传输报文（TCP上的套接字）"><a href="#使用Socket-API传输报文（TCP上的套接字）" class="headerlink" title="使用Socket API传输报文（TCP上的套接字）"></a>使用Socket API传输报文（TCP上的套接字）</h4><p>实际上，建立一个Socket连接后，操作系统就会返回一个“整数”，（Socket描述符、句柄），用于标识这个连接。之后，就可以通过这个描述符来进行通信。<br>本质上是一个连接的本地标识，是传输层自己维护的一个映射关系（源IP源Port-目的IP目的Port）。<br>操作Socket的“整数”的“值”，就是操作这个会话关系，简单易于管理。</p>
-<p>操作系统往往要维护一个这样的Socket表，用于管理所有的连接：<br><img src="/pictures/ComNet-C2/socket%E8%A1%A8.png" alt="Socket表" title="Socket表" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>Note:</p>
-<ul>
-<li>TCP四元组：源IP、源Port、目的IP、目的Port</li>
-<li>UDP二元组：目的IP、目的Port</li>
+<h4 id="TCP上的套接字（TCP-Socket）"><a href="#TCP上的套接字（TCP-Socket）" class="headerlink" title="TCP上的套接字（TCP Socket）"></a>TCP上的套接字（TCP Socket）</h4><ul>
+<li>TCP四元组：本地IP、本地Port、目的IP、目的Port</li>
 </ul>
+<p>实际上，建立一个Socket连接后，操作系统就会返回一个“整数”，（Socket描述符、句柄），用于标识这个连接。之后，就可以通过这个描述符来进行通信。<br>Socket本质上是一个连接的本地标识，<strong>一个会话关系</strong>，是传输层自己维护的一个映射关系（源IP源Port-目的IP目的Port）。<br>操作Socket的“整数”的“值”，就是操作这个会话关系，简单易于管理。</p>
+<p>操作系统往往要维护一个这样的TCP Socket表，用于管理所有的TCP连接：<br><img src="/pictures/ComNet-C2/socket%E8%A1%A8.png" alt="Socket表" title="Socket表" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h4 id="UDP上的套接字（UDP-Socket）"><a href="#UDP上的套接字（UDP-Socket）" class="headerlink" title="UDP上的套接字（UDP Socket）"></a>UDP上的套接字（UDP Socket）</h4><ul>
+<li>UDP二元组：本地IP、本地Port</li>
+</ul>
+<p>UDP Socket建立一个UDP二元组，代表本地IP和本地端口，是一个本地意义上的标识，代表的是一个会话关系中的<strong>一个端节点</strong>。因为UDP是无连接服务，不指定目的IP和端口。<br>UDP套接字指定了应用所在的一个端节点（end point），在发送数据报时，采用创建好的本地套接字（标示ID），就不必在发送每个报文中指明自己所采用的IP和Port了。<br>但是在发送报文时，必须要制定对方的IP和UDP Port（另一个端节点）。</p>
+<p>操作系统维护一个UDP Socket表，用于管理所有的UDP连接：<br><img src="/pictures/ComNet-C2/udpSocket%E8%A1%A8.png" alt="UDP Socket表" title="UDP Socket表" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <hr>
 <p>持续更新中…<br>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
 ]]></content>
