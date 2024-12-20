@@ -1009,7 +1009,24 @@
 </ul>
 <p>UDP Socket建立一个UDP二元组，代表本地IP和本地端口，是一个本地意义上的标识，代表的是一个会话关系中的<strong>一个端节点</strong>。因为UDP是无连接服务，不指定目的IP和端口。<br>UDP套接字指定了应用所在的一个端节点（end point），在发送数据报时，采用创建好的本地套接字（标示ID），就不必在发送每个报文中指明自己所采用的IP和Port了。<br>但是在发送报文时，必须要制定对方的IP和UDP Port（另一个端节点）。</p>
 <p>操作系统维护一个UDP Socket表，用于管理所有的UDP连接：<br><img src="/pictures/ComNet-C2/udpSocket%E8%A1%A8.png" alt="UDP Socket表" title="UDP Socket表" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h4 id="使用传输层提供的服务实现应用"><a href="#使用传输层提供的服务实现应用" class="headerlink" title="使用传输层提供的服务实现应用"></a>使用传输层提供的服务实现应用</h4><hr>
+<h3 id="应用层协议"><a href="#应用层协议" class="headerlink" title="应用层协议"></a>应用层协议</h3><ul>
+<li>协议是对等层实体应遵循的规则集合。</li>
+<li>应用层协议定义了：运行在不同端系统上的应用进程如何相互交换报文。报文包括请求和应答报文。</li>
+<li>公开协议：由RFC（Request for Comments）定义规范并发布，允许互操作，如<strong>HTTP、SMTP、FTP</strong>等。</li>
+<li>私有协议：一些不公开的内部协议，如Skype等。</li>
+</ul>
+<h2 id="Web与HTTP"><a href="#Web与HTTP" class="headerlink" title="Web与HTTP"></a>Web与HTTP</h2><h3 id="URL格式"><a href="#URL格式" class="headerlink" title="URL格式"></a>URL格式</h3><ul>
+<li>URL（Uniform Resource Locator）：统一资源定位符<ul>
+<li>URL格式：<code>&lt;scheme&gt;://&lt;host&gt;:&lt;port&gt;/&lt;path&gt;</code></li>
+<li>scheme：协议名，如http、https、ftp等</li>
+<li>host：主机名或IP地址</li>
+<li>port：端口号，可选</li>
+<li>path：资源路径</li>
+</ul>
+</li>
+</ul>
+<p><img src="/pictures/ComNet-C2/url%E6%A0%BC%E5%BC%8F.png" alt="URL格式" title="URL格式" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<hr>
 <p>持续更新中…<br>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
 ]]></content>
       <categories>
