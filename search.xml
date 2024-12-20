@@ -1026,7 +1026,41 @@
 </li>
 </ul>
 <p><img src="/pictures/ComNet-C2/url%E6%A0%BC%E5%BC%8F.png" alt="URL格式" title="URL格式" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<hr>
+<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><ul>
+<li><p>HTTP（HyperText Transfer Protocol）：超文本传输协议</p>
+</li>
+<li><p>HTTP使用TCP作为传输层协议：</p>
+<ul>
+<li>客户端发起一个与服务器的TCP连接（建立套接字），使用端口80；</li>
+<li>服务器接受客户端的TCP连接；</li>
+<li>在浏览器（HTTP客户端）与Web服务器（HTTP服务器server）交换HTTP报文（应用层协议报文）；</li>
+<li>TCP连接关闭。</li>
+</ul>
+</li>
+<li><p>HTTP是无状态的，服务器不维护客户端的状态和任何信息。这样的服务器也称为无状态服务器。</p>
+</li>
+</ul>
+<h4 id="HTTP连接"><a href="#HTTP连接" class="headerlink" title="HTTP连接"></a>HTTP连接</h4><ul>
+<li><p>非持久HTTP：</p>
+<ul>
+<li>最多只有一个对象在TCP连接上发送；</li>
+<li>下载多个对象需要多个TCP连接；</li>
+<li>HTTP&#x2F;1.0使用非持久连接。</li>
+</ul>
+</li>
+<li><p>持久HTTP：</p>
+<ul>
+<li>多个对象可以在一个TCP连接上传输；</li>
+<li>HTTP&#x2F;1.1默认使用持久连接。</li>
+</ul>
+</li>
+</ul>
+<h4 id="HTTP请求报文"><a href="#HTTP请求报文" class="headerlink" title="HTTP请求报文"></a>HTTP请求报文</h4><ul>
+<li>两种类型：请求和响应</li>
+<li>HTTP请求报文：</li>
+</ul>
+<p><img src="/pictures/ComNet-C2/HTTP%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87.png" alt="HTTP请求报文" title="HTTP请求报文" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h4 id="HTTP相应状态码"><a href="#HTTP相应状态码" class="headerlink" title="HTTP相应状态码"></a>HTTP相应状态码</h4><hr>
 <p>持续更新中…<br>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
 ]]></content>
       <categories>
