@@ -1060,7 +1060,37 @@
 <li>HTTP请求报文：</li>
 </ul>
 <p><img src="/pictures/ComNet-C2/HTTP%E8%AF%B7%E6%B1%82%E6%8A%A5%E6%96%87.png" alt="HTTP请求报文" title="HTTP请求报文" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h4 id="HTTP相应状态码"><a href="#HTTP相应状态码" class="headerlink" title="HTTP相应状态码"></a>HTTP相应状态码</h4><hr>
+<h4 id="HTTP相应状态码"><a href="#HTTP相应状态码" class="headerlink" title="HTTP相应状态码"></a>HTTP相应状态码</h4><ul>
+<li>200: OK</li>
+<li>301: Moved Permanently</li>
+<li>400: Bad Request</li>
+<li>404: Not Found</li>
+<li>505: HTTP Version Not Supported</li>
+</ul>
+<p><img src="/pictures/ComNet-C2/HTTP%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81.png" alt="HTTP响应状态码" title="HTTP响应状态码" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h4 id="维护用户-服务器状态：Cookie"><a href="#维护用户-服务器状态：Cookie" class="headerlink" title="维护用户-服务器状态：Cookie"></a>维护用户-服务器状态：Cookie</h4><ul>
+<li>Cookie：服务器发送给客户端的小文件，存储在客户端的文件中，用于维护用户-服务器状态；</li>
+<li>大部分主要的门户网站使用Cookies；</li>
+<li>4个组成部分:<ul>
+<li>在HTTP相应报文中有一个Cookie的首部行；</li>
+<li>在HTTP请求报文中有一个Cookie的首部行；</li>
+<li>在用户端系统中保留一个Cookie文件，由用户的浏览器管理；</li>
+<li>在Web站点有一个后端数据库。</li>
+</ul>
+</li>
+</ul>
+<p><img src="/pictures/ComNet-C2/Cookie.png" alt="Cookie" title="Cookie" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>Cookies与隐私：</p>
+<ul>
+<li>Cookies允许站点知道许多关于用户的信息；</li>
+<li>可能会将他所知道的资料信息卖给第三方；</li>
+<li>使用重定向和Cookie的搜索引擎，还能知道用户更多的信息；<ul>
+<li>如通过某个用户在大量站点上的行为，了解其个人浏览方式的大致模式。</li>
+</ul>
+</li>
+<li>广告公司从站点获得信息等。</li>
+</ul>
+<h4 id="Web缓存（Cache）"><a href="#Web缓存（Cache）" class="headerlink" title="Web缓存（Cache）"></a>Web缓存（Cache）</h4><hr>
 <p>持续更新中…<br>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
 ]]></content>
       <categories>
