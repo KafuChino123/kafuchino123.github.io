@@ -1109,6 +1109,10 @@
 </ul>
 </li>
 </ul>
+<h4 id="条件GET方法（Conditional-GET）"><a href="#条件GET方法（Conditional-GET）" class="headerlink" title="条件GET方法（Conditional GET）"></a>条件GET方法（Conditional GET）</h4><ul>
+<li>目标：如果缓存其中的缓存对象拷贝是最新的，就不用再从服务器上重新获取；反之获取，以获得最新版本的对象。</li>
+</ul>
+<p><img src="/pictures/ComNet-C2/%E6%9D%A1%E4%BB%B6GET%E6%96%B9%E6%B3%95.png" alt="条件GET方法" title="条件GET方法" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <hr>
 <p>持续更新中…<br>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
 ]]></content>
