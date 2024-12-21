@@ -1090,7 +1090,26 @@
 </li>
 <li>广告公司从站点获得信息等。</li>
 </ul>
-<h4 id="Web缓存（Cache）"><a href="#Web缓存（Cache）" class="headerlink" title="Web缓存（Cache）"></a>Web缓存（Cache）</h4><hr>
+<h4 id="Web缓存（代理服务器）"><a href="#Web缓存（代理服务器）" class="headerlink" title="Web缓存（代理服务器）"></a>Web缓存（代理服务器）</h4><ul>
+<li>目标：不访问原始服务器，就满足用户的请求；</li>
+<li>用户设置浏览器：通过缓存访问Web，浏览器将所有的HTTP请求发给缓存：<ul>
+<li>在缓存中的对象：缓存直接返回对象；</li>
+<li>如对象不在缓存，缓存请求原始服务器，然后再将对象返回给客户端。</li>
+</ul>
+</li>
+</ul>
+<p><img src="/pictures/ComNet-C2/Web%E7%BC%93%E5%AD%98.png" alt="Web缓存" title="Web缓存" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<ul>
+<li>Web缓存既是客户端，又是服务器；</li>
+<li>通常缓存是由ISP安装（大学、公司、居民区ISP等）。</li>
+<li>为什么要使用Web缓存？<ul>
+<li>降低客户端的请求响应时间；</li>
+<li>可以大大减少一个机构内部网络与Internet接入链路上的流量；</li>
+<li>互联网大量采用了缓存：可以使较弱的ICP也能够有效提供内容。</li>
+</ul>
+</li>
+</ul>
+<hr>
 <p>持续更新中…<br>如有错误，请及时指出～评论发邮件均可，欧内盖！</p>
 ]]></content>
       <categories>
