@@ -1029,7 +1029,7 @@
 <h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><ul>
 <li><p>HTTP（HyperText Transfer Protocol）：超文本传输协议</p>
 </li>
-<li><p>HTTP使用TCP作为传输层协议：</p>
+<li><p>HTTP使用<strong>TCP</strong>作为传输层协议：</p>
 <ul>
 <li>客户端发起一个与服务器的TCP连接（建立套接字），使用端口80；</li>
 <li>服务器接受客户端的TCP连接；</li>
@@ -1037,7 +1037,7 @@
 <li>TCP连接关闭。</li>
 </ul>
 </li>
-<li><p>HTTP是无状态的，服务器不维护客户端的状态和任何信息。这样的服务器也称为无状态服务器。</p>
+<li><p>HTTP是<strong>无状态</strong>的，服务器不维护客户端的状态和任何信息。这样的服务器也称为无状态服务器。</p>
 </li>
 </ul>
 <h4 id="HTTP连接"><a href="#HTTP连接" class="headerlink" title="HTTP连接"></a>HTTP连接</h4><ul>
